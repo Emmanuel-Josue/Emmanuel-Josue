@@ -1,0 +1,124 @@
+*{
+    box-sizing: border-box;
+}
+:root{
+    /* Son variables de CSS*/
+
+        --white: #FFFFFF;
+        --black: #000000;
+        --very-light-pink: #C7C7C7;
+        --text-input-field: #F7F7F7;
+        --hospital-green: #ACD9B2;
+        --fondo: #020202;
+        --fondo_1: #0d1117;
+        --blueBiolet: #8A2BE2;
+        --DarckOrchid: #9932CC;
+
+        /* Colocaresmo medidas, po lo que entiendo las medidas se guardan es las variables, 
+        cuando queramos colocarle estas medidas a algo, solamente colocamos el nombre de las
+        variables */
+        --sm: 14px;        
+        --md: 16px;
+        --lg: 18px;
+        --SuperGrande: 22px;
+
+    }  
+
+body{
+    margin: 0px;
+    background: Violet;    
+}
+
+/* Estilos del contenedor contenedorUno */
+
+.contenedor{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Estilos del baner */
+.baner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+    
+}
+.contenedorUno{
+    display: flex;
+    background: var(--fondo);
+    justify-content: center;
+}
+.contenedorDos{
+    position: relative;
+    background: var(--fondo);
+}
+.autor{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    color: var(--white);
+}
+.contenedor .baner .contenedorUno .titulo{
+    color: var(--white);
+}
+
+/* -------------------------------------------- */
+
+/* Estilos del menu */
+.menu{
+    display: grid;
+    background: var(--fondo_1);
+    grid-template-columns: 1fr 1fr 1fr 1fr;    
+}
+.contenedor .menu .item{
+    color: var(--white);
+    border: 1px solid var(--very-light-pink);
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* ------------------------------------------------------------------------  */
+
+/* Estilos del contenedor tres  */
+.contenedorTres{
+    display: grid;
+    background-image: url(https://i.ytimg.com/vi/fG_po4mdIgk/mqdefault.jpg);
+    /* background: var(--fondo); */
+    grid-template-columns: 35% 65%;
+    height: 100vh;
+    width: 100%;
+    
+}
+.contenedorTres #imagenUniverso{
+    width: 300px;
+    height: 300px;
+    background: green;
+    padding: 0px;
+    border-radius: 15px;
+    overflow: hidden;
+    place-self: center;
+
+}
+.contenedorTres .imagenDiverso img{
+    width: 100%;
+    height: 100%;
+}
+.contenedor .contenedorTres .descripcion{
+    display: grid;
+    /* background: var(--fondo); */
+    background-image: url(https://i.ytimg.com/vi/fG_po4mdIgk/mqdefault.jpg);
+    width: 100%;
+    height: 100vh;
+    padding: 50px;
+    /* Centramos los elementos que esten dentro de este contenedor grid */
+    place-items: center;
+}
+.contenedor .contenedorTres .descripcion #parrafoPrincipal{
+    /* Establecemos el tamaño de la letra */
+    font-size: var(--SuperGrande);
+    color: var(--white);
+    
+}
