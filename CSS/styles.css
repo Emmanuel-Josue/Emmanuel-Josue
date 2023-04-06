@@ -22,11 +22,13 @@
         --lg: 18px;
         --SuperGrande: 22px;
 
+
     }  
 
 body{
     margin: 0px;
     background: Violet;    
+    /* font-family: Caveat; */
 }
 
 /* Estilos del contenedor contenedorUno */
@@ -60,9 +62,13 @@ body{
     right: 20px;
     top: 10px;
     color: var(--white);
+    font-family: Caveat;
+    font-size: var(--SuperGrande);
 }
 .contenedor .baner .contenedorUno .titulo{
     color: var(--white);
+    /* Indicamos el tipo de letra que queremos utilizar */
+    font-family: Martel;
 }
 
 /* -------------------------------------------- */
@@ -71,13 +77,14 @@ body{
 .menu{
     display: grid;
     background: var(--fondo_1);
-    grid-template-columns: 1fr 1fr 1fr 1fr;    
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-family: Gruppo;    
 }
 .contenedor .menu .item{
     color: var(--white);
     border: 1px solid var(--very-light-pink);
     border-radius: 4px;
-    text-align: center;
+    text-align: center;    
 }
 
 /* ------------------------------------------------------------------------  */
@@ -114,12 +121,13 @@ body{
     padding: 50px;
     /* Centramos los elementos que esten dentro de este contenedor grid */
     place-items: center;
+    font-size: 24px;
+    font-family: Handlee;
 }
 .contenedor .contenedorTres .descripcion #parrafoPrincipal{
     /* Establecemos el tamaño de la letra */
-    font-size: var(--SuperGrande);
+    /* font-size: var(--SuperGrande); */
     color: var(--white);
-    
 }
 
 /* Diseño responsivo  */
@@ -127,14 +135,31 @@ body{
 @media (max-width: 640px){
 
     .contenedor .contenedorTres{
+
         grid-template-columns: auto;
         grid-template-rows: 50% 50%;
+
+        /* Vamos a indicar como se van a reubicar los elementos en el contenedor grid
+        con la siguiente propiedad */
+        grid-template-areas: 
+        "descripcion"
+        "imagen"
+        ;
         
     }
 
     .contenedor .contenedorTres .imagenDiverso{
         display: inline-block;
         justify-self: center;
+        /* Esta propiedad funciona en conjunto con la propiedad grid-template-areas, indica cual es el elemento con 
+        el nombre */
+        grid-area: imagen;
+    }
+
+    .contenedor .contenedorTres .descripcion{
+        /* Esta propiedad funciona en conjunto con la propiedad grid-template-areas, indica cual es el elemento con 
+        el nombre */
+        grid-area: descripcion;
     }
 
 }
