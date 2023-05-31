@@ -17,10 +17,9 @@
         /* Colocaresmo medidas, po lo que entiendo las medidas se guardan es las variables, 
         cuando queramos colocarle estas medidas a algo, solamente colocamos el nombre de las
         variables */
-        --sm: 14px;        
-        --md: 16px;
-        --lg: 18px;
-        --SuperGrande: 22px;
+        --sm: 18px;        
+        --md: 20px;
+        --lg: 22px;        
 
 
     }  
@@ -28,17 +27,27 @@
 body{
     margin: 0px;
     background: black;    
+    color: var(--white);
     /* font-family: Caveat; */
+}
+
+/* -------------------- ESTILO GENERALES ----------------------------- */
+h1{
+    padding: 0 0 40px 0;    
 }
 
 /* Estilos del contenedor contenedorUno */
 
 .contenedor{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
 
+}
+.handlee{
+    font-family: Handlee;
+    font-size: var(--lg);
 }
 
 /* Estilos del baner */
@@ -63,10 +72,9 @@ body{
     top: 10px;
     color: var(--white);
     font-family: Caveat;
-    font-size: var(--SuperGrande);
+    font-size: var(--lg);
 }
 .contenedor .baner .contenedorUno .titulo{
-    color: var(--white);
     /* Indicamos el tipo de letra que queremos utilizar */
     font-family: Martel;
 }
@@ -77,7 +85,7 @@ body{
 .menu{
     display: grid;
     background: var(--fondo_1);
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     font-family: Gruppo;    
 }
 .contenedor .menu .item{
@@ -121,8 +129,8 @@ body{
     padding: 50px;
     /* Centramos los elementos que esten dentro de este contenedor grid */
     place-items: center;
-    font-size: 24px;
-    font-family: Handlee;
+    font-size: var(--lg);
+    /* font-family: Handlee; */
 }
 .contenedor .contenedorTres .descripcion #parrafoPrincipal{
     /* Establecemos el tamaño de la letra */
@@ -130,7 +138,7 @@ body{
     color: var(--white);
 }
 
-/* Diseño responsivo  */
+/* ---------------------------- ----Diseño responsivo  ---------------------------------  */
 
 @media (max-width: 640px){
 
@@ -161,5 +169,62 @@ body{
         el nombre */
         grid-area: descripcion;
     }
+
+    /* ------------------ Stylos del contenedor introducción ------------------------ */
+
+    body .contenedor .introduccion{
+        padding: 50px 50px 0 50px;
+        display: flex;
+        flex-direction: column;
+    }
+
+     body .contenedor .introduccion .titulo{
+        /* font-size: var(--SuperGrande); */
+     }
+     body .contenedor .introduccion .saludo{
+        font-size: var(--lg);
+     }
+
+     body .contenedor .introduccion .yo{
+        width: 100%;
+        text-align: center;
+     }
+     body .contenedor .introduccion .mi-foto{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+     }
+     /* ------------------ Stylos del contenedor demostración ------------------------ */
+     body .contenedor .demostracion{
+        padding: 0px 50px 50px 50px;
+        display: flex;
+        flex-direction: column;
+     }
+     body .contenedor .demostracion .div-contenedor{
+        display: flex;
+        width: 100%;
+        height: 300px;
+     }
+     body .contenedor .demostracion .div-contenedor figure{
+        width: 50%;
+     }
+     body .contenedor .demostracion .div-contenedor figure img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+     }
+     body .contenedor .demostracion .div-contenedor p{
+        width: 50%;
+        padding: 10%;
+     }
+     body .contenedor .demostracion .div-contenedor *{
+        margin: 0;
+     }
+     body .contenedor .demostracion .div-contenedor-orden figure{
+        order: 2;
+     }
+     body .contenedor .demostracion .div-contenedor-orden p{
+        order: 1;
+     }
 
 }
