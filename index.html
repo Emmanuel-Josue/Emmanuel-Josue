@@ -21,17 +21,18 @@
 
 <body>
     <div class="contenedor">
-        <div class="baner">
-            <div class="contenedorUno">
-                <h1 class="titulo">DIVERSO</h1>
+        <div class="baner ignorar">
+            <div class="contenedorUno ignorar">
+                <h1 class="titulo ignorar">DIVERSO</h1>
             </div>
-            <div class="contenedorDos">
-                <div class="autor">Emmanuel. </div>
+            <div class="contenedorDos ignorar">
+                <!-- <div class="autor" id="principio">Emmanuel. </div> -->
+                <a href="#enlaceInternoUno" class="autor ignorar" id="principio">Emmanuel.</a>
             </div>
         </div>
-        <div class="menu">
-            <div class="item">Menu</div>
-            <div class="item">Proyectos</div>            
+        <div class="menu ignorar">
+            <div class="item ignorar">Menu</div>
+            <div class="item ignorar">Proyectos</div>            
         </div>
         <article class="contenedorTres">
             <div class="imagenDiverso" id="imagenUniverso">
@@ -85,7 +86,7 @@
                 </figure>
                 <p class="handlee"> Él esta del lado izquierdo y yo el texto estoy del lado derecho </p>
             </div>
-            <p>
+            <p class="handlee p-separador-imagenes">
                 O viseversa !!
             </p>
             <div class="div-contenedor div-contenedor-orden">
@@ -98,30 +99,32 @@
                 Puedo colocar enlaces a tus redes sociales u otras paginas como facebool, youtube, onlyfans, las que 
                 tú quieras!!
             </p> 
-            <div>
+            <div class="div-lista-imagenes">
                 <ul>
                     <li>
-                        <a href="">
-                            <img src="imagenes/youtube.png" alt="">
+                        <a href="" class="youtubeImage ignorar" >
+                            <img  class="ignorar" id="imgYoutube" src="imagenes/youtube.png" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <img src="imagenes/linkedin.png" alt="">
+                        <a href="" class="linkedinImage ignorar">
+                            <img class= "ignorar" id="imgLinkedin" src="imagenes/linkedin.png" alt="">
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <img src="imagenes/github.png" alt="">
+                        <a href="" class="gitImage ignorar">
+                            <img class= "ignorar" id="imgGit" src="imagenes/github.png" alt="">
                         </a>
                     </li>
                 </ul>
             </div>   
-            <p class="handlee">
+            <p class="handlee" id="enlaceInternoUno">
                 Estando en la pagina puedo llevarte a cualquier parte de esta algo así, preciona "Emmanuel para regresar !!" 
                 Preciona aquí 
-                <figure>
-                    <img src="imagenes/youtube.png" alt="">
+                <figure class="enlace-prueba">                    
+                    <a href="#principio" class="ignorar">
+                        <img src="imagenes/youtube.png" alt="" class="imagen-enlace-prueba ignorar">
+                    </a>
                 </figure>
             </p>      
             <p class="handlee">
@@ -132,8 +135,19 @@
                 o necesites yo lo puedo conseguir. 
             </p>  
         </section>
-        <section class="pie-pagina">
-            <h1>Por tu atención muchas gracias !!</h1>
+        <section class="pie-pagina handlee ignorar">
+            <h1 class="ignorar">Por tu atención muchas gracias !!</h1>
+            <article class="contenedor-contactos ignorar">
+                <div class="contacto ignorar">
+                    <div class="nombre-contacto ignorar">
+                        <figure class="ignorar">
+                            <img src="imagenes/youtube.png" alt="">
+                        </figure>
+                        <p class="ignorar">WhatsApp</p>
+                    </div>                
+                    <p class="ignorar">55-23-59-49-46</p>
+                </div>
+            </article>            
         </section>
     </div>
 
