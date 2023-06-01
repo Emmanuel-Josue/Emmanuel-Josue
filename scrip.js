@@ -1,24 +1,20 @@
-const pantallaContactos = document.querySelector('.opcion-contenedor-contactos');
+const pantallaContactos = document.querySelector('.pantalla-contactos');
 const itemContacos = document.querySelector('.item-contacto');
+
 
 itemContacos.addEventListener('click', mostrarContactos);
 
 function mostrarContactos(){
-    pantallaContactos.classList.remove('inactivo');
+    pantallaContactos.classList.toggle('inactivo');
 }
-// MEJORAR LA LOGICA
-document.addEventListener('click', function(event) {
-    let clickedElement = event.target;
-    let estaCerrado = pantallaContactos.classList.contains('inactivo');
+// El html recibe el evento click, cualquier parte de este
+document.addEventListener('click', eventoRecibido);
 
-    
-    // Verificar si el clic fue en un elemento diferente al que deseas
-    if ( clickedElement !== pantallaContactos && clickedElement !== itemContacos) {
-      pantallaContactos.classList.add('inactivo');
-    }
-    /*
-    else if(clickedElement.classList.contains('item-contacto') === itemContacos.classList.contains('item-contacto')){
-        pantallaContactos.classList.toggle('inactivo')
-    }
-    */
-  });
+function eventoRecibido(event) {
+  let clickedElement = event.target;
+  console.log(clickedElement);
+  let estamosEnPantallaContacots = clickedElement.classList.contains('pantalla-contactos');
+  if(!estamosEnPantallaContacots && clickedElement != itemContacos){
+    pantallaContactos.classList.add('inactivo');
+  }
+}
