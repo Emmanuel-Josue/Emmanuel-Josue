@@ -182,9 +182,29 @@ p{
     margin-right: 20px;
     place-self: end;
 }
-.inactivo{
-    display: none;
+/* ------------------------------- Pantalla que muestra el elace a los proyecots --------------------- */
+
+.opcion-contenedor-proyectos{
+    background-color: var(--black);
+    display: flex;
+    position: absolute;
+    width: 50%;
+    height: auto;
+    top: 162px;
+    left: 50%;
+    padding: 15px;
+    border: 1px solid var(--very-light-pink);
+    border-radius: 10px;
 }
+.nombre-proyecto{
+    text-align: center;
+}
+.opcion-proyecto{
+    border-bottom: 1px solid gainsboro;
+    width: 100%;
+}
+
+
 /* ---------------------------- ----Diseño responsivo  ---------------------------------  */
 
 @media (max-width: 640px){
@@ -353,3 +373,10 @@ p{
     }
 
 }
+
+/*  Nos aseguramos que esta sea la ultima clase que se aplique  */
+
+.inactivo{
+    display: none;
+}
+
