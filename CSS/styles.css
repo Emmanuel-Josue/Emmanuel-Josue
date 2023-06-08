@@ -23,15 +23,16 @@
 
 
     }  
-
+/* -------------------- ESTILO GENERALES ----------------------------- */
 body{
     margin: 0px;
     background: black;    
     color: var(--white);
     /* font-family: Caveat; */
 }
-
-/* -------------------- ESTILO GENERALES ----------------------------- */
+.contenedor > *:not(.baner, .menu, .contenedorTres){
+    padding: 25px 50px 0px 50px;
+}
 h1{
     padding: 0 0 40px 0;    
 }
@@ -111,8 +112,9 @@ p{
     background-image: url(https://i.ytimg.com/vi/fG_po4mdIgk/mqdefault.jpg);
     /* background: var(--fondo); */
     grid-template-columns: 35% 65%;
-    height: 100vh;
+    height: auto;
     width: 100%;
+    padding-top: 25px;
     
 }
 .contenedorTres #imagenUniverso{
@@ -204,7 +206,108 @@ p{
     width: 100%;
 }
 
+/*  -------------------------------  Introducción ---------------------------------- */
+.introduccion{
+    display: flex;
+    flex-direction: column;    
+}
+.titulo{
+    padding: 0;
+}
+.yo{
+    align-self: center;
+}
+.mi-foto{
+    align-self: center;
+    margin-bottom: 50px;
+}
 
+/* ---------------------------------- Demostración --------------------------------------- */
+.demostracion .titulo{
+    margin: 0 0 50px 0;
+}
+.demostracion .div-contenedor{
+    display: flex;
+    width: 100%;
+    height: auto;
+    /* justify-content: space-between; */
+}
+.div-contenedor figure{
+    width: 50%;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    /* Se utiuliza con flex */
+    justify-content: center;
+}
+
+.div-contenedor-orden figure{
+    order: 2;
+ }
+.div-contenedor-orden p{
+    order: 1;
+ }
+ .p-separador-imagenes{
+    margin: 30px 0 30px 0;
+    text-align: center;
+ }
+ .div-contenedor p{
+    width: 50%;
+    /* padding: 10%; */
+    text-align: center;
+    display: flex;
+    align-items: center;
+ }
+.demostracion .div-lista-imagenes ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;        
+    padding: 0;
+ }
+.demostracion .div-lista-imagenes ul li{
+    margin-left: 8px;
+    
+ }
+.demostracion .div-lista-imagenes ul li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;                        
+ }
+.youtubeImage{
+    background-color: red;        
+}
+.linkedinImage{
+    background-color: blue;
+}
+.gitImage{
+    border: 1px solid var(--white);
+    background-color: var(--black);
+}
+.enlace-prueba{
+    display: flex;
+    justify-content: center;       
+}
+.imagen-enlace-prueba{
+    padding: 15px;
+    background-color: red;
+    border-radius: 5px;
+} 
+
+/*--------------------------------------------  Pie de pagina ---------------------------------*/
+.pie-pagina{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid var(--very-light-pink);
+
+}
+.pie-pagina h1{
+    font-size: var(--md);
+}
 /* ---------------------------- ----Diseño responsivo  ---------------------------------  */
 
 @media (max-width: 640px){
@@ -267,11 +370,11 @@ p{
         display: flex;
         flex-direction: column;
      }
-     body .contenedor .demostracion .div-contenedor{
+     /* body .contenedor .demostracion .div-contenedor{
         display: flex;
         width: 100%;
         height: 300px;
-     }
+     } */
      body .contenedor .demostracion .div-contenedor figure{
         width: 50%;
      }
@@ -288,66 +391,17 @@ p{
      body .contenedor .demostracion .div-contenedor *{
         margin: 0;
      }
-     body .contenedor .demostracion .p-separador-imagenes{
-        margin: 30px 0 30px 0;
-        text-align: center;
-     }
-     body .contenedor .demostracion .div-contenedor-orden figure{
-        order: 2;
-     }
-     body .contenedor .demostracion .div-contenedor-orden p{
-        order: 1;
-     }
-     body .contenedor .demostracion .div-lista-imagenes ul{
-        display: flex;
-        justify-content: center;
-        /* align-items: center; */
-        list-style: none;        
-        padding: 0;
-     }
-     body .contenedor .demostracion .div-lista-imagenes ul li{
-        margin-left: 8px;
-        
-     }
-     body .contenedor .demostracion .div-lista-imagenes ul li a{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 15px;
-        border-radius: 5px;
-        width: 100%;
-        height: 100%;                        
-     }
-    .youtubeImage{
-        background-color: red;        
-    }
-    .linkedinImage{
-        background-color: blue;
-    }
-    .gitImage{
-        border: 1px solid var(--white);
-    }
-    .enlace-prueba{
-        display: flex;
-        justify-content: center;       
-    }
-    .imagen-enlace-prueba{
-        padding: 15px;
-        background-color: red;
-        border-radius: 5px;
-    }
-
     /* ---------------- Estilos pie de pagina ------------------------------ */
 
-    .pie-pagina{
+    /* .pie-pagina{
         display: flex;
         flex-direction: column;
         align-items: center;
         border-top: 1px solid var(--very-light-pink);
-    }
-    .pie-pagina h1{
+    } */
+    /* .pie-pagina h1{
         font-size: var(--md);
-    }
+    } */
     .contenedor-contactos{
         display: flex;
         flex-direction: column;
