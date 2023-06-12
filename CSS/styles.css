@@ -156,7 +156,7 @@ p{
     width: 50%;
     height: auto;
     background-color: black;
-    top: 162px;
+    top: 121px;
     padding: 15px;
     border: 1px solid var(--very-light-pink);
     border-radius: 10px;
@@ -174,12 +174,18 @@ p{
 }
 .opcion-nombre-contacto figure{
     margin: 0;
-    margin-right: 5px;
+    margin-right: 8px;
+}
+.opcion-nombre-contacto figure img{
+    width: 30px;
+    height: 30px;
+    background-color: var(--black);
+    
 }
 .opcion-nombre-contacto p{
     margin: 0;
 }
-.opcion-contacto p{
+.opcion-contacto > p{
     margin-top: 0;
     margin-right: 20px;
     place-self: end;
@@ -293,8 +299,9 @@ p{
 }
 .imagen-enlace-prueba{
     padding: 15px;
-    background-color: red;
-    border-radius: 5px;
+    background-color: black;
+    border-radius: 100%;
+    border: 1px solid var(--very-light-pink);
 } 
 
 /*--------------------------------------------  Pie de pagina ---------------------------------*/
@@ -307,6 +314,21 @@ p{
 }
 .pie-pagina h1{
     font-size: var(--md);
+}
+.pie-pagina .contacto{
+    display: flex;
+    align-items: center ;
+}
+.pie-pagina .contacto .nombre-contacto{
+    display: flex;
+    align-items: center ;
+}
+.pie-pagina .nombre-contacto figure{
+    margin: 0 8px 0 0;
+    height: 35px;
+}
+.pie-pagina .nombre-contacto p{
+    margin: 0 8px 0 0;
 }
 /* ---------------------------- ----Diseño responsivo  ---------------------------------  */
 
