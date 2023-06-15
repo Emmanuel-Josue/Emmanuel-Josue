@@ -61,13 +61,16 @@ p{
 .baner{
     display: grid;
     grid-template-columns: 1fr 1fr;
-   
+    margin: 2%;
     
 }
 .contenedorUno{
     display: flex;
     background: var(--fondo);
-    justify-content: center;
+    padding-left: 5%;
+}
+.contenedorUno h1{
+    margin: 0;;
 }
 .contenedorDos{
     position: relative;
@@ -77,7 +80,6 @@ p{
     display: inline-block;
     position: absolute;
     right: 20px;
-    top: 10px;
     color: var(--white);
     font-family: Caveat;
     font-size: var(--lg);
@@ -156,7 +158,7 @@ p{
     width: 50%;
     height: auto;
     background-color: black;
-    top: 121px;
+    top: 95px;
     padding: 15px;
     border: 1px solid var(--very-light-pink);
     border-radius: 10px;
@@ -198,7 +200,7 @@ p{
     position: absolute;
     width: 50%;
     height: auto;
-    top: 162px;
+    top: 95px;
     left: 50%;
     padding: 15px;
     border: 1px solid var(--very-light-pink);
@@ -226,6 +228,12 @@ p{
 .mi-foto{
     align-self: center;
     margin-bottom: 50px;
+    
+}
+.mi-foto img{
+    width: auto;
+    height: auto;
+    border-radius: 15px;
 }
 
 /* ---------------------------------- Demostración --------------------------------------- */
@@ -252,6 +260,12 @@ p{
  }
 .div-contenedor-orden p{
     order: 1;
+ }
+ .div-contenedor figure img{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
  }
  .p-separador-imagenes{
     margin: 30px 0 30px 0;
@@ -310,14 +324,23 @@ p{
     flex-direction: column;
     align-items: center;
     border-top: 1px solid var(--very-light-pink);
+    margin-bottom: 50px;
 
 }
 .pie-pagina h1{
     font-size: var(--md);
 }
+.pie-pagina .contenedor-contactos{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
 .pie-pagina .contacto{
     display: flex;
     align-items: center ;
+}
+.pie-pagina p a{
+    color: #66CDAA;
 }
 .pie-pagina .contacto .nombre-contacto{
     display: flex;
@@ -432,6 +455,7 @@ p{
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 15px;
     }
     .contenedor-contactos .contacto .nombre-contacto{
         display: flex;
