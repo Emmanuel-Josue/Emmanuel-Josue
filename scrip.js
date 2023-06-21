@@ -2,6 +2,8 @@ const pantallaContactos = document.querySelector('.pantalla-contactos');
 const itemContacos = document.querySelector('.item-contacto');
 const pantallaProyectos = document.querySelector('.pantalla-proyectos');
 const itemProyectos = document.querySelector('.item-proyectos');
+const elementoBaner = document.querySelector('.baner');
+const elementoMenu = document.querySelector('.menu');
 
 
 itemContacos.addEventListener('click', mostrarContactos);
@@ -54,3 +56,15 @@ function mostrarProyectos(){
   variables en su interior y luego guardaremos esta nueva función en una variable para que de esta manera tengamos
   una fución con la misma estructura pero diferentes variables ya que en este lenguaje solo podemos pasar referencias. 
 */
+
+
+// Colocaremos el top al elemento mostrar contactos y proyectos
+
+
+let largoBaner = elementoBaner.offsetHeight;
+let largoMenu = elementoMenu.offsetHeight;
+let largoPantallaContactos = largoBaner + largoMenu;
+let largoString = largoPantallaContactos.toString();
+pantallaContactos.style.top = largoString + 'px';
+pantallaProyectos.style.top = largoString + 'px';
+

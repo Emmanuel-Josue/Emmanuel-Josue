@@ -30,7 +30,7 @@ body{
     color: var(--white);
     /* font-family: Caveat; */
 }
-.contenedor > *:not(.baner, .menu, .contenedorTres){
+.contenedor > *:not(.baner, nav, .contenedorTres){
     padding: 25px 50px 0px 50px;
 }
 h1{
@@ -61,7 +61,8 @@ p{
 .baner{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 2%;
+    /* margin: 1%; */
+    padding: 1% 15px 1% 15px;
     
 }
 .contenedorUno{
@@ -70,7 +71,8 @@ p{
     padding-left: 5%;
 }
 .contenedorUno h1{
-    margin: 0;;
+    margin: 0;
+    font-size: var(--lg);
 }
 .contenedorDos{
     position: relative;
@@ -82,7 +84,7 @@ p{
     right: 20px;
     color: var(--white);
     font-family: Caveat;
-    font-size: var(--lg);
+    font-size: var(--sm);
     text-decoration: none;
 }
 .contenedor .baner .contenedorUno .titulo{
@@ -352,6 +354,65 @@ p{
 }
 .pie-pagina .nombre-contacto p{
     margin: 0 8px 0 0;
+}
+
+/* --------------------------------- Relacion audio - imagen ------------------------------------*/
+.contenedor nav{
+    padding: 0;
+}
+.browser{
+    border: 1px solid var(--very-light-pink);
+    height: 15px;
+    width: 100%;
+}
+
+.practice{
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    place-items: center;    
+}
+.answer-options{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;    
+    padding: 0;
+    margin: 25px 0 50px 0;
+    row-gap: 15px;    
+    column-gap: 15px;
+}
+.answer-options li{
+    width: 150px;
+    height: 150px;
+    list-style: none;        
+}
+.answer-options li:nth-child(1){
+    justify-self: end;
+}
+.answer-options li:nth-child(2){
+    justify-self: start;
+}
+.answer-options li:nth-child(3){
+    justify-self: end;
+}
+.answer-options li:nth-child(4){
+    justify-self: start;
+}
+.answer-options li img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+.button-prees{    
+    width: 315px;
+    height: 50px;    
+}
+.primary-button{
+    width: 100%;
+    height: 100%;
+    background-color: #66CDAA;
+    border-radius: 15px;
+    border: 1px solid var(--very-light-pink);
 }
 /* ---------------------------- ----Diseño responsivo  ---------------------------------  */
 
