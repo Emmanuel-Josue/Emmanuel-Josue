@@ -1,3 +1,6 @@
+// ---------------------------- Importaciones ----------------------------------------------
+
+
 const pantallaContactos = document.querySelector(".pantalla-contactos");
 const itemContacos = document.querySelector(".item-contacto");
 const pantallaProyectos = document.querySelector(".pantalla-proyectos");
