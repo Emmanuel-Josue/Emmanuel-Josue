@@ -18,8 +18,7 @@ export class Imagen{
             '../recursos/imagenes/imagenesVerbosRegulares/5 hurry.png',
             '../recursos/imagenes/imagenesVerbosRegulares/6 dare.png',
             '../recursos/imagenes/imagenesVerbosRegulares/7 help.png',
-            '../recursos/imagenes/imagenesVerbosRegulares/8 dance.png',
-            '../recursos/imagenes/imagenesVerbosRegulares/9 erase.png'
+            '../recursos/imagenes/imagenesVerbosRegulares/8 dance.png'            
 
         ];
     }

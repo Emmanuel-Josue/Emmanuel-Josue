@@ -17,7 +17,7 @@ export class AudioR{
             '../recursos/audio/audioVerbosRegularesWAV/5 HURRY.wav',
             '../recursos/audio/audioVerbosRegularesWAV/6 DARE.wav',
             '../recursos/audio/audioVerbosRegularesWAV/7 HELP.wav',
-            '../recursos/audio/audioVerbosRegularesWAV/8 DANCE.wav'           
+            '../recursos/audio/audioVerbosRegularesWAV/8 DANCE.wav'          
         ]
     }
     get audios(){
@@ -30,8 +30,9 @@ export class AudioR{
         this.audio.src = direccion;
     }
     // para que this pueda tomar como contexto a su objeto. 
-    reproducir = () => {
-        console.log('Objeto audio: ' + this.audio);        
+    reproducir = () => {      
+        console.log('Se preciono el boton press');
+        console.log('Ruta a reproducir: ' + this.audio.src);
         this.audio.play();            
     }
     //Una pagina se repite en tiempo de ejecución ?? 
