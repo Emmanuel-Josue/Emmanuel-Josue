@@ -369,6 +369,7 @@ p{
 }
 
 .practice{
+    position: relative;
     display: flex;
     flex-direction: column;
     height: 100vh; 
@@ -418,7 +419,13 @@ p{
     border: 1px solid var(--very-light-pink);
 }
 /* --------------------------------- Ventana acierto -------------------------------------*/
-#acierto{
+.ventanaExterna{
+    position: absolute;
+    /* Coloco la ventana en la posición en donde aparecera  */
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* -------- */
     background-color: var(--black);
     width: 450px;
     height: 250px;
@@ -430,7 +437,7 @@ p{
     padding: 8px;
     border: 1px solid var(--very-light-pink);
 }
-#acierto div:nth-child(1){
+.ventanaExterna div:nth-child(1){
     display: flex;
     justify-content: center;
     align-items: center;
@@ -438,7 +445,7 @@ p{
     height: 100%;
 
 }
-#acierto div:nth-child(2){
+.ventanaExterna div:nth-child(2){
     height: 100px;
     width: 100%;
     display: flex;
@@ -446,7 +453,7 @@ p{
     column-gap: 8px;
     align-items: center;
 }
-#acierto div button{
+.ventanaExterna div button{
     width: 100px;
     height: 40px;
     background-color:  #2F4F4F;
@@ -454,7 +461,7 @@ p{
     border: 1px solid var(--very-light-pink);
     color: var(--white);    
 }
-#acierto img{
+.ventanaExterna img{
     width: 100px;
     height: 100px;
 }
