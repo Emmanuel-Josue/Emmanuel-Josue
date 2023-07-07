@@ -24,6 +24,8 @@ export class AudioR{
         return this.#_audios;
     }
     crearOAudio(direccion){
+        console.log('La dirección nobtenida es: '+ direccion);
+        
         this.audio = new Audio(direccion); 
     }
     establecerRutaAReproducir(direccion){

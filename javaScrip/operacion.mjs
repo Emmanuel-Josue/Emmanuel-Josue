@@ -1,4 +1,5 @@
 "use strict";
+import { Pregunta } from "./pregunta.mjs";
 /* -------------------------------- Importaciones ----------------------------------- */
 
 export class Operaciones {
@@ -14,25 +15,36 @@ export class Operaciones {
     
   }
 
-  crearPregunta(){     
-    this.establecerRutasAElementos(this.#_contenedorImagen, this.#_objetoPregunta);
-
+  crearPregunta(){  
+    // El rango es el número actual que hay en el arreglo de las imagenes del objeto imagen 
+    this.#numerosAleatorios(this.#_objetoPregunta.oImagen.imagenes.length);  
+    this.#establecerRutasAElementos(this.#_contenedorImagen, this.#_objetoPregunta.oImagen.imagenes);
     // De los cuatro números que se muestran se elije uno para que sea la respuesta
     this.#_indiceRespuesta = this.#numeroAleatorio(3);
     this.#_objetoPregunta.oAudio.crearOAudio(this.#_objetoPregunta.oAudio.audios[this.#_opcionesNumerosAleatorios[this.#_indiceRespuesta]]);    
   }
-  crearPreguntaAdicionandoElementos(){
+  crearPreguntaAdicionandoElementos(indiceImagen){
+
+    const preguntaParaRelleno = new Pregunta();
+    // Para tener un rango nuevamente amplio se utiliza el largo del objeto que servira de apoyo proporcionando más imagenes
+    this.#numerosAleatorios(preguntaParaRelleno.oImagen.imagenes.length);
+    // Contenedor en donde se colocara la imagen respuesta
+    this.#_indiceRespuesta = this.#numeroAleatorio(3);
+    // Crearemos un arreglo en donde se tengan las imagesn aleatorias que se obtuvieron del nuevo objeto y colocaremos 
+    // en una posición aleatoria la imagen que será la respuesta, una de las tres restantes del objeto #_oPregunta
     
+    this.#establecerRutasAElementos(this.#_contenedorImagen, preguntaParaRelleno);
+    // En el audio se coloca el número "indiceImagen" para hacer referencia al numero del audio (posición), es el ultimo número que hay 
+    // en ambos arreglos 2, 1, 0 
+    this.#_objetoPregunta.oAudio.crearOAudio(this.#_objetoPregunta.oAudio.audios[indiceImagen]);
   }
   
-  establecerRutasAElementos(contenedorImagen, objetoPregunta) {
-    // El rango es el número actual que hay en el arreglo de las imagenes del objeto imagen
-    this.#_opcionesNumerosAleatorios = this.#numerosAleatorios(objetoPregunta.oImagen.imagenes.length);
+ #establecerRutasAElementos(contenedorImagen, arregloImagenes) {
     
-    contenedorImagen[0].src = objetoPregunta.oImagen.imagenes[this.#_opcionesNumerosAleatorios[0]];
-    contenedorImagen[1].src = objetoPregunta.oImagen.imagenes[this.#_opcionesNumerosAleatorios[1]];
-    contenedorImagen[2].src = objetoPregunta.oImagen.imagenes[this.#_opcionesNumerosAleatorios[2]];
-    contenedorImagen[3].src = objetoPregunta.oImagen.imagenes[this.#_opcionesNumerosAleatorios[3]];
+    contenedorImagen[0].src = arregloImagenes[this.#_opcionesNumerosAleatorios[0]];
+    contenedorImagen[1].src = arregloImagenes[this.#_opcionesNumerosAleatorios[1]];
+    contenedorImagen[2].src = arregloImagenes[this.#_opcionesNumerosAleatorios[2]];
+    contenedorImagen[3].src = arregloImagenes[this.#_opcionesNumerosAleatorios[3]];
   }
   validarRespuesta(numeroImagenPrecionada, elementoAcierto, elementoError, btnPress){
     btnPress.classList.add("inactivo");
@@ -55,11 +67,13 @@ export class Operaciones {
   }
 
   elegirModoDeCrearPregunta(){
-    if(this.objetoPregunta.oImagen.imagenes.length > 3){
+
+    if(this.#_objetoPregunta.oImagen.imagenes.length > 3){
       this.crearPregunta();
     }
     else{
-
+      let indiceImagenAColocar = (this.#_objetoPregunta.oImagen.imagenes.length - 1);
+      this.crearPreguntaAdicionandoElementos(indiceImagenAColocar);
     }
   }
 
@@ -83,11 +97,20 @@ export class Operaciones {
       }
     }
 
-    return numerosAleatorios;
+    this.#_opcionesNumerosAleatorios = numerosAleatorios;
   }
 
   #numeroAleatorio(rango){
     const numeroAleatorio = Math.floor(Math.random() * (rango + 1)); // Genera un número aleatorio dentro del rango
     return numeroAleatorio;
+  }
+  #crearArreglo(grupoAleatorios, objetoPregunta, objetoApoyo, indiceContenedorRespuesta, indiceImagen){
+    let arreglo = [];
+    for (let i = 0; i <= 3; i++) {   
+      if(indiceContenedorRespuesta === i){
+        arreglo.push(objetoPregunta.oImagen.imagenes[indiceImagen]);
+      }   
+      arreglo.push(objetoPregunta.oImagen.imagenes[]);
+    }
   }
 }
