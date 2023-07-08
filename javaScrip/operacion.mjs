@@ -28,12 +28,18 @@ export class Operaciones {
     const preguntaParaRelleno = new Pregunta();
     // Para tener un rango nuevamente amplio se utiliza el largo del objeto que servira de apoyo proporcionando más imagenes
     this.#numerosAleatorios(preguntaParaRelleno.oImagen.imagenes.length);
+
+    // Creamos el arreglo  temporal 
+    let arreglo = this.#crearArregloTemporal(this.#_opcionesNumerosAleatorios, preguntaParaRelleno);
+
     // Contenedor en donde se colocara la imagen respuesta
     this.#_indiceRespuesta = this.#numeroAleatorio(3);
-    // Crearemos un arreglo en donde se tengan las imagesn aleatorias que se obtuvieron del nuevo objeto y colocaremos 
-    // en una posición aleatoria la imagen que será la respuesta, una de las tres restantes del objeto #_oPregunta
-    
-    this.#establecerRutasAElementos(this.#_contenedorImagen, preguntaParaRelleno);
+
+    //Intercambiamos un elemento aleatorio por la imagen respuesta. 
+    this.#colocarImagenRespuesta(this.#_objetoPregunta.oImagen.imagenes[indiceImagen], arreglo, this.#_indiceRespuesta);
+
+
+    this.#establecerRutasAElementosDos(this.#_contenedorImagen, arreglo);
     // En el audio se coloca el número "indiceImagen" para hacer referencia al numero del audio (posición), es el ultimo número que hay 
     // en ambos arreglos 2, 1, 0 
     this.#_objetoPregunta.oAudio.crearOAudio(this.#_objetoPregunta.oAudio.audios[indiceImagen]);
@@ -46,6 +52,17 @@ export class Operaciones {
     contenedorImagen[2].src = arregloImagenes[this.#_opcionesNumerosAleatorios[2]];
     contenedorImagen[3].src = arregloImagenes[this.#_opcionesNumerosAleatorios[3]];
   }
+
+  #establecerRutasAElementosDos(contenedorImagen, arregloImagenes) {
+    
+    contenedorImagen[0].src = arregloImagenes[0];
+    contenedorImagen[1].src = arregloImagenes[1];
+    contenedorImagen[2].src = arregloImagenes[2];
+    contenedorImagen[3].src = arregloImagenes[3];
+  }
+  
+
+  
   validarRespuesta(numeroImagenPrecionada, elementoAcierto, elementoError, btnPress){
     btnPress.classList.add("inactivo");
     //Se verifica con el array de las imagenes, una de las cuatro que se elijieron y se compara con el indice del 
@@ -104,13 +121,15 @@ export class Operaciones {
     const numeroAleatorio = Math.floor(Math.random() * (rango + 1)); // Genera un número aleatorio dentro del rango
     return numeroAleatorio;
   }
-  #crearArreglo(grupoAleatorios, objetoPregunta, objetoApoyo, indiceContenedorRespuesta, indiceImagen){
+  #crearArregloTemporal(grupoAleatorios, objetoPregunta){
     let arreglo = [];
     for (let i = 0; i <= 3; i++) {   
-      if(indiceContenedorRespuesta === i){
-        arreglo.push(objetoPregunta.oImagen.imagenes[indiceImagen]);
-      }   
-      arreglo.push(objetoPregunta.oImagen.imagenes[]);
+      arreglo.push(objetoPregunta.oImagen.imagenes[grupoAleatorios[i]]);
     }
+    return arreglo;
+  }
+  #colocarImagenRespuesta(direccion, arregloTemporal, indiceRespuesta){
+    arregloTemporal[indiceRespuesta] = direccion;
+
   }
 }
