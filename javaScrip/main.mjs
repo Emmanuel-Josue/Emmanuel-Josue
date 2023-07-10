@@ -22,7 +22,7 @@ let oOperaciones = new Operaciones(contenedorImagen, oPregunta);
 // Función crea y establece que nuemero se enviara en la función que valida la respuesta
 function establecerNumeroAEnviar(numero) {
     return function () {
-        oOperaciones.validarRespuesta(numero, vtnAcierto, vtnError, btnPress);
+        oOperaciones.validacion(numero, vtnAcierto, vtnError, btnPress);
     }
 }
 

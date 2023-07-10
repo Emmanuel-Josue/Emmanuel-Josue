@@ -7,6 +7,7 @@ export class Operaciones {
   #_contenedorImagen;
   #_indiceRespuesta;
   #_opcionesNumerosAleatorios;
+  #_intentosFinales;
   constructor( contenedorImagen,objetoPregunta) {
     this.#_objetoPregunta = objetoPregunta;
     this.#_contenedorImagen = contenedorImagen;
@@ -26,20 +27,24 @@ export class Operaciones {
   crearPreguntaAdicionandoElementos(indiceImagen){
 
     const preguntaParaRelleno = new Pregunta();
+    //Buscamos la posición del elemento que es identico al elemento que será la respuesta, para que aparesca una imagen duplicada
+    let indice = preguntaParaRelleno.oImagen.imagenes.indexOf(this.#_objetoPregunta.oImagen.imagenes[indiceImagen]);
+    //borramos en ambos arreglo del objeto nuevo la dirección o cadena que será la respuesta
+    this.#borrarElemento(indice, preguntaParaRelleno.oAudio.audios, preguntaParaRelleno.oImagen.imagenes);
     // Para tener un rango nuevamente amplio se utiliza el largo del objeto que servira de apoyo proporcionando más imagenes
     this.#numerosAleatorios(preguntaParaRelleno.oImagen.imagenes.length);
 
     // Creamos el arreglo  temporal 
-    let arreglo = this.#crearArregloTemporal(this.#_opcionesNumerosAleatorios, preguntaParaRelleno);
+    this.#_intentosFinales = this.#crearArregloTemporal(this.#_opcionesNumerosAleatorios, preguntaParaRelleno);
 
     // Contenedor en donde se colocara la imagen respuesta
     this.#_indiceRespuesta = this.#numeroAleatorio(3);
 
     //Intercambiamos un elemento aleatorio por la imagen respuesta. 
-    this.#colocarImagenRespuesta(this.#_objetoPregunta.oImagen.imagenes[indiceImagen], arreglo, this.#_indiceRespuesta);
+    this.#colocarImagenRespuesta(this.#_objetoPregunta.oImagen.imagenes[indiceImagen], this.#_intentosFinales, this.#_indiceRespuesta);
 
 
-    this.#establecerRutasAElementosDos(this.#_contenedorImagen, arreglo);
+    this.#establecerRutasAElementosDos(this.#_contenedorImagen, this.#_intentosFinales);
     // En el audio se coloca el número "indiceImagen" para hacer referencia al numero del audio (posición), es el ultimo número que hay 
     // en ambos arreglos 2, 1, 0 
     this.#_objetoPregunta.oAudio.crearOAudio(this.#_objetoPregunta.oAudio.audios[indiceImagen]);
@@ -69,11 +74,29 @@ export class Operaciones {
     //numero del audio. 
     if (this.#_objetoPregunta.oImagen.imagenes[this.#_opcionesNumerosAleatorios[numeroImagenPrecionada]] === this.#_objetoPregunta.oImagen.imagenes[this.#_opcionesNumerosAleatorios[this.#_indiceRespuesta]]) {
       elementoAcierto.classList.remove("inactivo");
-      this.#borrarElemento(this.#_opcionesNumerosAleatorios[this.#_indiceRespuesta]);
+      this.#borrarElemento(this.#_opcionesNumerosAleatorios[this.#_indiceRespuesta], this.#_objetoPregunta.oAudio.audios, this.#_objetoPregunta.oImagen.imagenes);
     
       console.log('Elementos actuales en el array ' + this.#_objetoPregunta.oImagen.imagenes);
       
       console.log('Tu respuesta fue correcta');
+      
+    }
+    else{
+      elementoError.classList.remove("inactivo");
+      console.log('Fallaste');
+      
+    }
+  }
+  validarRespuestaDos(numeroImagenPrecionada, elementoAcierto, elementoError, btnPress){
+    btnPress.classList.add("inactivo");
+    if (this.#_intentosFinales[numeroImagenPrecionada] === this.#_intentosFinales[this.#_indiceRespuesta]) {
+      elementoAcierto.classList.remove("inactivo");
+      this.#borrarElemento((this.#_objetoPregunta.oImagen.imagenes.length-1), this.#_objetoPregunta.oAudio.audios, this.#_objetoPregunta.oImagen.imagenes);    
+      console.log('Elementos actuales en el array ' + this.#_objetoPregunta.oImagen.imagenes);
+      if (this.#_objetoPregunta.oImagen.imagenes.length === 0) {
+          console.log(' El programa se ha terminado !!');
+          
+      }
       
     }
     else{
@@ -88,18 +111,35 @@ export class Operaciones {
     if(this.#_objetoPregunta.oImagen.imagenes.length > 3){
       this.crearPregunta();
     }
-    else{
+    else if(this.#_objetoPregunta.oImagen.imagenes.length <=3 && this.#_objetoPregunta.oImagen.imagenes.length > 0){
       let indiceImagenAColocar = (this.#_objetoPregunta.oImagen.imagenes.length - 1);
       this.crearPreguntaAdicionandoElementos(indiceImagenAColocar);
     }
+    else{
+      console.log('El programa ha concluido !!');
+      
+    }
   }
+  //Elije la forma de validar 
+  validacion(numeroImagenPrecionada, elementoAcierto, elementoError, btnPress){
+    if (this.#_objetoPregunta.oImagen.imagenes.length > 3) {
+      this.validarRespuesta(numeroImagenPrecionada, elementoAcierto, elementoError, btnPress);
+    }
+    else if(this.#_objetoPregunta.oImagen.imagenes.length <=3 && this.#_objetoPregunta.oImagen.imagenes.length > 0){
+      this.validarRespuestaDos(numeroImagenPrecionada, elementoAcierto, elementoError, btnPress);
+    }
+    else{
+      console.log('No hay elementos para validar ');
+      
+    }
+    }
 
-  #borrarElemento(indiceArray){
+  #borrarElemento(indiceArray, arregloAudio, arregloImagen){
 
-    console.log('Elemento a eliminar' + this.#_objetoPregunta.oImagen.imagenes[indiceArray]);
+    console.log('Elemento a eliminar' + arregloImagen[indiceArray]);
     
-    this.#_objetoPregunta.oAudio.audios.splice(indiceArray, 1);
-    this.#_objetoPregunta.oImagen.imagenes.splice(indiceArray, 1);
+    arregloImagen.splice(indiceArray, 1);
+    arregloAudio.splice(indiceArray, 1);
   }
 
   #numerosAleatorios(rango) {
@@ -132,4 +172,5 @@ export class Operaciones {
     arregloTemporal[indiceRespuesta] = direccion;
 
   }
+
 }
