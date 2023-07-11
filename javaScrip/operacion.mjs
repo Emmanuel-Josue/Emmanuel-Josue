@@ -134,6 +134,10 @@ export class Operaciones {
     }
     }
 
+    cerrarVentana(componente){
+      componente.classList.add('inactivo');
+    }
+
   #borrarElemento(indiceArray, arregloAudio, arregloImagen){
 
     console.log('Elemento a eliminar' + arregloImagen[indiceArray]);

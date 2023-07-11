@@ -13,6 +13,7 @@ const vtnAcierto = document.querySelector(".ventanaAcierto");
 const vtnError = document.querySelector(".ventanaError");
 const btnPress = document.querySelector(".button-prees");
 const btnSiguiente = document.querySelector(".btnSiguiente");
+const btnRepetir = document.querySelector(".btnRepetir");
 
 /* -------------------------------- Atributos de la clase ---------------------------- */
 let oPregunta = new Pregunta();
@@ -40,6 +41,11 @@ function llamarPregunta() {
     oOperaciones.elegirModoDeCrearPregunta();
 }
 
+function repetir(){
+    btnPress.classList.remove('inactivo');
+    oOperaciones.cerrarVentana(vtnError);
+}
+
 
 /* ---------------------------------- Eventos de acción ----------------------------------------- */
 
@@ -49,6 +55,14 @@ imagenDos.addEventListener("click", enviarDos);
 imagenTres.addEventListener("click", enviarTres);
 imagenCuatro.addEventListener("click", enviarCuatro);
 btnSiguiente.addEventListener("click", llamarPregunta);
+btnRepetir.addEventListener("click", repetir);
+
+
+//Funcion para probar las conexiones con los componentes 
+function saludar() {
+    console.log('HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
+    
+}
 
 
 
