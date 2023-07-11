@@ -210,8 +210,18 @@ p{
     border: 1px solid var(--very-light-pink);
     border-radius: 10px;
 }
+.opcion-nombre-proyecto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 8px;
+}
 .nombre-proyecto{
-    text-align: center;
+    font-family: gruppo;
+    background: none;
+    color: var(--white);
+    font-size: var(--sm);
+    border: none;
 }
 .opcion-proyecto{
     border-bottom: 1px solid gainsboro;

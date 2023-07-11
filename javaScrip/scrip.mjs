@@ -5,11 +5,11 @@ const pantallaContactos = document.querySelector(".pantalla-contactos");
 const itemContacos = document.querySelector(".item-contacto");
 const pantallaProyectos = document.querySelector(".pantalla-proyectos");
 const itemProyectos = document.querySelector(".item-proyectos");
+const btnRelacionAudioImagen = document.querySelector(".nombre-proyecto");
 const elementoBaner = document.querySelector(".baner");
 const elementoMenu = document.querySelector(".menu");
 
-itemContacos.addEventListener("click", mostrarContactos);
-itemProyectos.addEventListener("click", mostrarProyectos);
+
 
 function mostrarContactos() {
   calcularPosicionDeTop();
@@ -32,10 +32,6 @@ const cerrarPantallaProyectos = crearFuncionCerrarComponente(
   pantallaProyectos
 );
 
-// El html recibe el evento click, cualquier parte de este
-document.addEventListener("click", cerrarPantallaContactos);
-document.addEventListener("click", cerrarPantallaProyectos);
-
 
 // Funcion generica para determinar si un componente se cierra o no.
 function crearFuncionCerrarComponente(
@@ -44,7 +40,9 @@ function crearFuncionCerrarComponente(
   objetoACerrar
 ) {
   return function cerrarComponente(event) {
+    //Nos dice en qué componenete estamos 
     let clickedElement = event.target;
+    // Nos dice si en el componenete en el que estasmos tiene la clase que le indicamos 
     let estamosEnComponente =
       clickedElement.classList.contains(selectorComponente);
     if (!estamosEnComponente && clickedElement != objetoComponenteExento) {
@@ -71,4 +69,25 @@ function calcularPosicionDeTop(params) {
   let largoString = largoPantallaContactos.toString();
   pantallaContactos.style.top = largoString + "px";
   pantallaProyectos.style.top = largoString + "px";
+}
+
+function abrirPagina() {
+  window.location.href = '../html/relacionAudioImagen.html';
+}
+
+
+// ------------------------------------------ Eventos --------------------------------------
+
+itemContacos.addEventListener("click", mostrarContactos);
+itemProyectos.addEventListener("click", mostrarProyectos);
+
+// El html recibe el evento click, cualquier parte de este
+document.addEventListener("click", cerrarPantallaContactos);
+document.addEventListener("click", cerrarPantallaProyectos);
+
+btnRelacionAudioImagen.addEventListener("click", abrirPagina);
+
+function saludar() {
+  console.log('HOLAAAAAAAAAAAAAAAAAAAAAAAAA');
+  
 }
