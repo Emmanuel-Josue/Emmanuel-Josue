@@ -8,6 +8,7 @@ export class Operaciones {
   #_indiceRespuesta;
   #_opcionesNumerosAleatorios;
   #_intentosFinales;
+  #_ventanaFinal;
   constructor( contenedorImagen,objetoPregunta) {
     this.#_objetoPregunta = objetoPregunta;
     this.#_contenedorImagen = contenedorImagen;
@@ -66,7 +67,9 @@ export class Operaciones {
     contenedorImagen[3].src = arregloImagenes[3];
   }
   
-
+  set ventanaFinal(elemento){
+    this.#_ventanaFinal = elemento;
+  }
   
   validarRespuesta(numeroImagenPrecionada, elementoAcierto, elementoError, btnPress){
     btnPress.classList.add("inactivo");
@@ -117,6 +120,7 @@ export class Operaciones {
     }
     else{
       console.log('El programa ha concluido !!');
+      this.#activarVentana(this.#_ventanaFinal);
       
     }
   }
@@ -175,6 +179,9 @@ export class Operaciones {
   #colocarImagenRespuesta(direccion, arregloTemporal, indiceRespuesta){
     arregloTemporal[indiceRespuesta] = direccion;
 
+  }
+  #activarVentana(elemento){
+    elemento.classList.remove("inactivo");
   }
 
 }

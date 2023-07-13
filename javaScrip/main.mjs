@@ -14,12 +14,15 @@ const vtnError = document.querySelector(".ventanaError");
 const btnPress = document.querySelector(".button-prees");
 const btnSiguiente = document.querySelector(".btnSiguiente");
 const btnRepetir = document.querySelector(".btnRepetir");
-
+const vtnFinal = document.querySelector(".ventanaFinal");
+const btnSalir = document.querySelectorAll(".btnSalir");
 /* -------------------------------- Atributos de la clase ---------------------------- */
 let oPregunta = new Pregunta();
 let contenedorImagen = [imagenUno, imagenDos, imagenTres, imagenCuatro];
 let oOperaciones = new Operaciones(contenedorImagen, oPregunta);
 
+//Le brindamos la ventana que mostrara al terminar la practica 
+oOperaciones.ventanaFinal = vtnFinal;
 // Función crea y establece que nuemero se enviara en la función que valida la respuesta
 function establecerNumeroAEnviar(numero) {
     return function () {
@@ -45,6 +48,9 @@ function repetir(){
     btnPress.classList.remove('inactivo');
     oOperaciones.cerrarVentana(vtnError);
 }
+function salir(){
+    history.back();
+}
 
 
 /* ---------------------------------- Eventos de acción ----------------------------------------- */
@@ -56,6 +62,8 @@ imagenTres.addEventListener("click", enviarTres);
 imagenCuatro.addEventListener("click", enviarCuatro);
 btnSiguiente.addEventListener("click", llamarPregunta);
 btnRepetir.addEventListener("click", repetir);
+btnSalir[0].addEventListener("click", salir);
+btnSalir[1].addEventListener("click", salir);
 
 
 //Funcion para probar las conexiones con los componentes 

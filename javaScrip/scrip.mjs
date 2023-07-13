@@ -8,7 +8,8 @@ const itemProyectos = document.querySelector(".item-proyectos");
 const btnRelacionAudioImagen = document.querySelector(".nombre-proyecto");
 const elementoBaner = document.querySelector(".baner");
 const elementoMenu = document.querySelector(".menu");
-
+const irPrincipio = document.querySelector("#principio");
+const enlaceInternoUno = document.querySelector("#enlaceInternoUno");
 
 
 function mostrarContactos() {
@@ -74,7 +75,15 @@ function calcularPosicionDeTop(params) {
 function abrirPagina() {
   window.location.href = '../html/relacionAudioImagen.html';
 }
-
+function irASeccion() {
+  desplazar(irPrincipio);
+}
+function irASeccionBoton(){
+  desplazar(enlaceInternoUno);
+}
+function desplazar(componente){
+  componente.scrollIntoView({ behavior: 'smooth' });
+}
 
 // ------------------------------------------ Eventos --------------------------------------
 
@@ -86,6 +95,11 @@ document.addEventListener("click", cerrarPantallaContactos);
 document.addEventListener("click", cerrarPantallaProyectos);
 
 btnRelacionAudioImagen.addEventListener("click", abrirPagina);
+
+enlaceInternoUno.addEventListener("click", irASeccion);
+irPrincipio.addEventListener("click", irASeccionBoton);
+
+
 
 function saludar() {
   console.log('HOLAAAAAAAAAAAAAAAAAAAAAAAAA');
