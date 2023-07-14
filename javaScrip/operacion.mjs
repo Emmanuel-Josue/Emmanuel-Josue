@@ -92,7 +92,12 @@ export class Operaciones {
   }
   validarRespuestaDos(numeroImagenPrecionada, elementoAcierto, elementoError, btnPress){
     btnPress.classList.add("inactivo");
-    if (this.#_intentosFinales[numeroImagenPrecionada] === this.#_intentosFinales[this.#_indiceRespuesta]) {
+    if(this.#_intentosFinales[numeroImagenPrecionada] === this.#_intentosFinales[this.#_indiceRespuesta] && this.#_objetoPregunta.oImagen.imagenes.length ===1){
+      console.log('El programa ha concluido !!');
+      this.#borrarElemento((this.#_objetoPregunta.oImagen.imagenes.length-1), this.#_objetoPregunta.oAudio.audios, this.#_objetoPregunta.oImagen.imagenes); 
+      this.#activarVentana(this.#_ventanaFinal);
+    }
+    else if (this.#_intentosFinales[numeroImagenPrecionada] === this.#_intentosFinales[this.#_indiceRespuesta]) {
       elementoAcierto.classList.remove("inactivo");
       this.#borrarElemento((this.#_objetoPregunta.oImagen.imagenes.length-1), this.#_objetoPregunta.oAudio.audios, this.#_objetoPregunta.oImagen.imagenes);    
       console.log('Elementos actuales en el array ' + this.#_objetoPregunta.oImagen.imagenes);
@@ -117,11 +122,6 @@ export class Operaciones {
     else if(this.#_objetoPregunta.oImagen.imagenes.length <=3 && this.#_objetoPregunta.oImagen.imagenes.length > 0){
       let indiceImagenAColocar = (this.#_objetoPregunta.oImagen.imagenes.length - 1);
       this.crearPreguntaAdicionandoElementos(indiceImagenAColocar);
-    }
-    else{
-      console.log('El programa ha concluido !!');
-      this.#activarVentana(this.#_ventanaFinal);
-      
     }
   }
   //Elije la forma de validar 

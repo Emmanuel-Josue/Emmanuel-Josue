@@ -369,11 +369,12 @@ p{
 }
 
 /* --------------------------------- Relacion audio - imagen ------------------------------------*/
+/*  Se deja para estilizar el menu en el futuro */
 .contenedor nav{
     padding: 0;
 }
 .browser{
-    border: 1px solid var(--very-light-pink);
+    border-bottom: 1px solid var(--very-light-pink);
     height: 15px;
     width: 100%;
 }

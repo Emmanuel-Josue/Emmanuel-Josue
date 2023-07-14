@@ -16,6 +16,7 @@ const btnSiguiente = document.querySelector(".btnSiguiente");
 const btnRepetir = document.querySelector(".btnRepetir");
 const vtnFinal = document.querySelector(".ventanaFinal");
 const btnSalir = document.querySelectorAll(".btnSalir");
+const btnReiniciar = document.querySelector(".btnReiniciar");
 /* -------------------------------- Atributos de la clase ---------------------------- */
 let oPregunta = new Pregunta();
 let contenedorImagen = [imagenUno, imagenDos, imagenTres, imagenCuatro];
@@ -51,6 +52,9 @@ function repetir(){
 function salir(){
     history.back();
 }
+function recargar(){
+    location.reload(true);
+}
 
 
 /* ---------------------------------- Eventos de acción ----------------------------------------- */
@@ -64,6 +68,7 @@ btnSiguiente.addEventListener("click", llamarPregunta);
 btnRepetir.addEventListener("click", repetir);
 btnSalir[0].addEventListener("click", salir);
 btnSalir[1].addEventListener("click", salir);
+btnReiniciar.addEventListener("click", recargar);
 
 
 //Funcion para probar las conexiones con los componentes 
