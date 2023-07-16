@@ -30,7 +30,7 @@ body{
     color: var(--white);
     /* font-family: Caveat; */
 }
-.contenedor > *:not(.baner, .menu, .contenedorTres){
+.contenedor > *:not(.baner, nav, .contenedorTres){
     padding: 25px 50px 0px 50px;
 }
 h1{
@@ -61,7 +61,10 @@ p{
 .baner{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 2%;
+    /* margin: 1%; */
+    padding: 1% 15px 1% 15px;
+
+    /* background-color: #66CDAA; */
     
 }
 .contenedorUno{
@@ -70,7 +73,8 @@ p{
     padding-left: 5%;
 }
 .contenedorUno h1{
-    margin: 0;;
+    margin: 0;
+    font-size: var(--lg);
 }
 .contenedorDos{
     position: relative;
@@ -82,7 +86,7 @@ p{
     right: 20px;
     color: var(--white);
     font-family: Caveat;
-    font-size: var(--lg);
+    font-size: var(--sm);
     text-decoration: none;
 }
 .contenedor .baner .contenedorUno .titulo{
@@ -206,8 +210,18 @@ p{
     border: 1px solid var(--very-light-pink);
     border-radius: 10px;
 }
+.opcion-nombre-proyecto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 8px;
+}
 .nombre-proyecto{
-    text-align: center;
+    font-family: gruppo;
+    background: none;
+    color: var(--white);
+    font-size: var(--sm);
+    border: none;
 }
 .opcion-proyecto{
     border-bottom: 1px solid gainsboro;
@@ -353,6 +367,120 @@ p{
 .pie-pagina .nombre-contacto p{
     margin: 0 8px 0 0;
 }
+
+/* --------------------------------- Relacion audio - imagen ------------------------------------*/
+/*  Se deja para estilizar el menu en el futuro */
+.contenedor nav{
+    padding: 0;
+}
+.browser{
+    border-bottom: 1px solid var(--very-light-pink);
+    height: 15px;
+    width: 100%;
+}
+
+.practice{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    place-items: center;    
+}
+.answer-options{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;    
+    padding: 0;
+    margin: 25px 0 50px 0;
+    row-gap: 15px;    
+    column-gap: 15px;
+}
+.answer-options li{
+    width: 150px;
+    height: 150px;
+    list-style: none;           
+}
+.answer-options li:nth-child(1){
+    justify-self: end;
+}
+.answer-options li:nth-child(2){
+    justify-self: start;
+}
+.answer-options li:nth-child(3){
+    justify-self: end;
+}
+.answer-options li:nth-child(4){
+    justify-self: start;
+}
+.answer-options li img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    border: 2px solid var(--very-light-pink); 
+}
+.button-prees{    
+    width: 315px;
+    height: 50px;    
+}
+.primary-button{
+    width: 100%;
+    height: 100%;
+    background-color: #C0C0C0;
+    border-radius: 15px;
+    border: 1px solid var(--very-light-pink);
+}
+.primary-button img{
+    width: 30px;
+    height: 30px;
+}
+/* --------------------------------- Ventana acierto -------------------------------------*/
+.ventanaExterna{
+    position: absolute;
+    /* Coloco la ventana en la posición en donde aparecera  */
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* -------- */
+    background-color: var(--black);
+    width: 450px;
+    height: 250px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid var(--very-light-pink);
+}
+.ventanaExterna div:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+.ventanaExterna div:nth-child(2){
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+    align-items: center;
+}
+.ventanaExterna div button{
+    width: 100px;
+    height: 40px;
+    background-color:  #2F4F4F;
+    border-radius: 10px;
+    border: 1px solid var(--very-light-pink);
+    color: var(--white);    
+}
+.ventanaExterna img{
+    width: 100px;
+    height: 100px;
+}
+
 /* ---------------------------- ----Diseño responsivo  ---------------------------------  */
 
 @media (max-width: 640px){

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/styles.css">
 
     <!-- Recursos -->
 
@@ -27,7 +27,7 @@
             </div>
             <div class="contenedorDos ignorar">
                 <!-- <div class="autor" id="principio">Emmanuel. </div> -->
-                <a href="#enlaceInternoUno" class="autor ignorar" id="principio">Emmanuel.</a>
+                <a class="autor ignorar" id="principio">Emmanuel.</a>
             </div>
         </div>
         <nav class="menu ignorar">
@@ -58,9 +58,10 @@
 
             <!-- ------------- Pantalla que muestra los proyectos ---------------------------------------- -->
             <div class="opcion-contenedor-proyectos ignorar pantalla-proyectos inactivo">
-                <div class="opcion-proyecto ignorar">
-                    <div class="opcion-nombre-proyecto ignorar">                        
-                        <p class="ignorar nombre-proyecto">Relación audio-imagen (ingles)</p>
+                <div class="opcion-proyecto ignorar pantalla-proyectos">
+                    <div class="opcion-nombre-proyecto ignorar pantalla-proyectos">                        
+                        <!-- <p class="ignorar nombre-proyecto">Relación audio-imagen (ingles)</p> -->
+                        <button class="ignorar nombre-proyecto pantalla-proyectos"> Relación audio-imagen (ingles) </button>
                     </div>
                 </div>
             </div>
@@ -151,13 +152,13 @@
                     </li>
                 </ul>
             </div>
-            <p class="handlee" id="enlaceInternoUno">
+            <p class="handlee">
                 Estando en la pagina puedo llevarte a cualquier parte de esta algo así, preciona "Emmanuel para regresar
                 !!"
                 Preciona aquí
             <figure class="enlace-prueba">
-                <a href="#principio" class="ignorar">
-                    <img src="https://i.imgur.com/YAXFSV3.png" alt="" class="imagen-enlace-prueba ignorar">
+                <a class="ignorar"  id="enlaceInternoUno">
+                    <img src="imagenes/iconmonstr-radio-button-checked-thin-48.png" alt="" class="imagen-enlace-prueba ignorar">
                 </a>
             </figure>
             </p>
@@ -198,7 +199,7 @@
             </article>
         </section>
     </div>
-    <script src="scrip.js"></script>
+    <script src="../javaScrip/scrip.mjs" type="module"></script>
 
 
 </body>
