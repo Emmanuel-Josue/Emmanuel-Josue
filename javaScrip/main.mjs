@@ -71,12 +71,4 @@ btnSalir[1].addEventListener("click", salir);
 btnReiniciar.addEventListener("click", recargar);
 
 
-//Funcion para probar las conexiones con los componentes 
-function saludar() {
-    console.log('HOLAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA');
-    
-}
-
-
-
 
