@@ -11,14 +11,14 @@ export class Imagen{
 
     #listaImagenes(){
         this.#_imagenes = [
-            '../recursos/imagenes/imagenesVerbosRegulares/1 open.png',
-            '../recursos/imagenes/imagenesVerbosRegulares/2 accept.png',
-            '../recursos/imagenes/imagenesVerbosRegulares/3 love.png',
-            '../recursos/imagenes/imagenesVerbosRegulares/4 learn.png',
-            '../recursos/imagenes/imagenesVerbosRegulares/5 hurry.png',
-            '../recursos/imagenes/imagenesVerbosRegulares/6 dare.png',
-            '../recursos/imagenes/imagenesVerbosRegulares/7 help.png',
-            '../recursos/imagenes/imagenesVerbosRegulares/8 dance.png'            
+            'https://i.imgur.com/iXnmSas.png',
+            'https://i.imgur.com/IHGE467.png',
+            'https://i.imgur.com/0ftbb5y.png',
+            'https://i.imgur.com/BXwahbv.png',
+            'https://i.imgur.com/6S7Ancd.png',
+            'https://i.imgur.com/xtEH8RO.png',
+            'https://i.imgur.com/EHjWsEg.png',
+            'https://i.imgur.com/9O1MZe1.png'           
 
         ];
     }
