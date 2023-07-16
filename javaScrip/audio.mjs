@@ -10,7 +10,7 @@ export class AudioR{
 
     #listaAudios(){
         this.#_audios = [
-            'https://drive.google.com/file/d/1Ly2_cYdHM7TahP55jy4ghEUfVk9lLQnY/view?usp=drive_link',
+            'https://github.com/Josue-Emmanuel/PrimeraPractica/blob/main/audios/1%20OPEN.wav',
             'https://drive.google.com/file/d/1GcG5RKFOP7ZefwZUysqWXkWTjdBzygle/view?usp=drive_link',
             'https://drive.google.com/file/d/14IDuwM9uxX5jVpNNHgAy6bFhnbpYsUrE/view?usp=drive_link',
             'https://drive.google.com/file/d/14kxyrIZf1R2eTKgQ3bd24_bMxGJoOMkK/view?usp=drive_link',
