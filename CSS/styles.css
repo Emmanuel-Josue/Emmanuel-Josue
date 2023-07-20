@@ -88,6 +88,7 @@ p{
     font-family: Caveat;
     font-size: var(--sm);
     text-decoration: none;
+    cursor: pointer;
 }
 .contenedor .baner .contenedorUno .titulo{
     /* Indicamos el tipo de letra que queremos utilizar */
@@ -101,13 +102,18 @@ p{
     display: grid;
     background: var(--fondo_1);
     grid-template-columns: 1fr 1fr;
-    font-family: Gruppo;    
+    height: 24px;
+    font-family: Gruppo; 
+    
 }
 .contenedor .menu .item{
+    display: flex;
     color: var(--white);
     border: 1px solid var(--very-light-pink);
     border-radius: 4px;
-    text-align: center;    
+    align-items: center;
+    justify-content: center;
+      
 }
 
 /* ------------------------------------------------------------------------  */
@@ -195,6 +201,13 @@ p{
     margin-top: 0;
     margin-right: 20px;
     place-self: end;
+}
+.opcion-contacto > a{
+    place-self: end;
+    margin-right: 20px;
+    color: #66CDAA;
+    text-decoration: none;
+    margin-bottom: 17px;
 }
 /* ------------------------------- Pantalla que muestra el elace a los proyecots --------------------- */
 
@@ -330,6 +343,7 @@ p{
     background-color: black;
     border-radius: 100%;
     border: 1px solid var(--very-light-pink);
+    cursor: pointer;
 } 
 
 /*--------------------------------------------  Pie de pagina ---------------------------------*/
