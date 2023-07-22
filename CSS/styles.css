@@ -271,7 +271,6 @@ p{
     display: flex;
     width: 100%;
     height: auto;
-    /* justify-content: space-between; */
 }
 .div-contenedor figure{
     width: 50%;
@@ -503,7 +502,7 @@ p{
 
         grid-template-columns: auto;
         grid-template-rows: 50% 50%;
-
+        padding: 0;
         /* Vamos a indicar como se van a reubicar los elementos en el contenedor grid
         con la siguiente propiedad */
         grid-template-areas: 
@@ -525,12 +524,13 @@ p{
         /* Esta propiedad funciona en conjunto con la propiedad grid-template-areas, indica cual es el elemento con 
         el nombre */
         grid-area: descripcion;
+        padding: 20px;
     }
 
     /* ------------------ Stylos del contenedor introducción ------------------------ */
 
     body .contenedor .introduccion{
-        padding: 50px 50px 0 50px;
+        padding: 50px 20px 0 20px;
         display: flex;
         flex-direction: column;
     }
@@ -553,7 +553,7 @@ p{
      }
      /* ------------------ Stylos del contenedor demostración ------------------------ */
      body .contenedor .demostracion{
-        padding: 0px 50px 50px 50px;
+        padding: 0px 20px 50px 20px;
         display: flex;
         flex-direction: column;
      }
