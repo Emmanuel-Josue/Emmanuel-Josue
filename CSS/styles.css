@@ -28,7 +28,6 @@ body{
     margin: 0px;
     background: black;    
     color: var(--white);
-    /* font-family: Caveat; */
 }
 .contenedor > *:not(.baner, nav, .contenedorTres){
     padding: 25px 50px 0px 50px;
@@ -61,11 +60,7 @@ p{
 .baner{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* margin: 1%; */
     padding: 1% 15px 1% 15px;
-
-    /* background-color: #66CDAA; */
-    
 }
 .contenedorUno{
     display: flex;
@@ -122,7 +117,6 @@ p{
 .contenedorTres{
     display: grid;
     background-image: url(https://i.ytimg.com/vi/fG_po4mdIgk/mqdefault.jpg);
-    /* background: var(--fondo); */
     grid-template-columns: 35% 65%;
     height: auto;
     width: 100%;
@@ -145,18 +139,14 @@ p{
 }
 .contenedor .contenedorTres .descripcion{
     display: grid;
-    /* background: var(--fondo); */
     background-image: url(https://i.ytimg.com/vi/fG_po4mdIgk/mqdefault.jpg);
     width: 100%;
     padding: 50px;
     /* Centramos los elementos que esten dentro de este contenedor grid */
     place-items: center;
     font-size: var(--lg);
-    /* font-family: Handlee; */
 }
 .contenedor .contenedorTres .descripcion #parrafoPrincipal{
-    /* Establecemos el tamaño de la letra */
-    /* font-size: var(--SuperGrande); */
     color: var(--white);
 }
 
@@ -299,7 +289,6 @@ p{
  }
  .div-contenedor p{
     width: 50%;
-    /* padding: 10%; */
     text-align: center;
     display: flex;
     align-items: center;
@@ -534,10 +523,6 @@ p{
         display: flex;
         flex-direction: column;
     }
-
-     body .contenedor .introduccion .titulo{
-        /* font-size: var(--SuperGrande); */
-     }
      body .contenedor .introduccion .saludo{
         font-size: var(--lg);
      }
@@ -557,11 +542,6 @@ p{
         display: flex;
         flex-direction: column;
      }
-     /* body .contenedor .demostracion .div-contenedor{
-        display: flex;
-        width: 100%;
-        height: 300px;
-     } */
      body .contenedor .demostracion .div-contenedor figure{
         width: 50%;
      }
@@ -579,16 +559,6 @@ p{
         margin: 0;
      }
     /* ---------------- Estilos pie de pagina ------------------------------ */
-
-    /* .pie-pagina{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-top: 1px solid var(--very-light-pink);
-    } */
-    /* .pie-pagina h1{
-        font-size: var(--md);
-    } */
     .contenedor-contactos{
         display: flex;
         flex-direction: column;
