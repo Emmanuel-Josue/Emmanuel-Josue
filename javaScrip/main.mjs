@@ -20,7 +20,7 @@ const btnReiniciar = document.querySelector(".btnReiniciar");
 /* -------------------------------- Atributos de la clase ---------------------------- */
 let oPregunta = new Pregunta();
 let contenedorImagen = [imagenUno, imagenDos, imagenTres, imagenCuatro];
-let oOperaciones = new Operaciones(contenedorImagen, oPregunta);
+let oOperaciones = new Operaciones(contenedorImagen, oPregunta);// Cuando se crea el objeto se crea la primera pregunta
 
 //Le brindamos la ventana que mostrara al terminar la practica 
 oOperaciones.ventanaFinal = vtnFinal;
@@ -69,6 +69,7 @@ btnRepetir.addEventListener("click", repetir);
 btnSalir[0].addEventListener("click", salir);
 btnSalir[1].addEventListener("click", salir);
 btnReiniciar.addEventListener("click", recargar);
+
 
 
 
