@@ -248,12 +248,16 @@ p{
     
 }
 .mi-foto img{
-    width: auto;
-    height: auto;
+    width: 300px;
+    height: 300px;
     border-radius: 15px;
+    object-fit: cover;
 }
 
 /* ---------------------------------- Demostración --------------------------------------- */
+.demostracion{
+    padding-bottom: 100px !important; 
+}
 .demostracion .titulo{
     margin: 0 0 50px 0;
 }

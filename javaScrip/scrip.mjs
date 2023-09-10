@@ -73,7 +73,7 @@ function calcularPosicionDeTop(params) {
 }
 
 function abrirPagina() {
-  window.location.href = '../html/relacionAudioImagen.html';
+  window.location.href = 'html/relacionAudioImagen.html';
 }
 function irASeccion() {
   desplazar(irPrincipio);
