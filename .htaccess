@@ -1,2 +1,2 @@
-Addtype text/javascript .mjs .js
-Addtype application / javascript .mjs
+AddType application/javascript .mjs
+AddType application/javascript .js
