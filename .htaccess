@@ -1,2 +1,6 @@
-AddType application/javascript .mjs
-AddType application/javascript .js
+<IfModule mod_mime.c>
+    AddType application/javascript .mjs
+    AddType application/javascript .js
+    AddType text/javascript .mjs
+    AddType text/javascript .js
+</IfModule>
