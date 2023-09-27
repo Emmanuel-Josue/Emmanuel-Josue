@@ -10,14 +10,14 @@ export class AudioR{
 
     #listaAudios(){
         this.#_audios = [
-            'https://github.com/Josue-Emmanuel/PrimeraPractica/blob/main/audios/1%20OPEN.wav',
-            'https://drive.google.com/file/d/1GcG5RKFOP7ZefwZUysqWXkWTjdBzygle/view?usp=drive_link',
-            'https://drive.google.com/file/d/14IDuwM9uxX5jVpNNHgAy6bFhnbpYsUrE/view?usp=drive_link',
-            'https://drive.google.com/file/d/14kxyrIZf1R2eTKgQ3bd24_bMxGJoOMkK/view?usp=drive_link',
-            'https://drive.google.com/file/d/1jmcoA5MShfOpIMc8vU3v2y7LVVHsnC0Q/view?usp=drive_link',
-            'https://drive.google.com/file/d/1U2RodCiTcNfDLx_-QIkqwy6nB-S3C842/view?usp=drive_link',
-            'https://drive.google.com/file/d/1MafBbK42nPA3ljZp4cTqvxANgKwBffq9/view?usp=drive_link',
-            'https://drive.google.com/file/d/1JX_W4R_tGt42be-lvZAcN3M7WSSJU9-U/view?usp=drive_link'          
+            '../recursos/audio/audioVerbosRegularesWAV/1 OPEN.wav',
+            '../recursos/audio/audioVerbosRegularesWAV/2 ACCEPT.wav',          
+            '../recursos/audio/audioVerbosRegularesWAV/3 LOVE.wav',
+            '../recursos/audio/audioVerbosRegularesWAV/4 LEARN.wav',
+            '../recursos/audio/audioVerbosRegularesWAV/5 HURRY.wav',
+            '../recursos/audio/audioVerbosRegularesWAV/6 DARE.wav',
+            '../recursos/audio/audioVerbosRegularesWAV/7 HELP.wav',
+            '../recursos/audio/audioVerbosRegularesWAV/8 DANCE.wav',
         ]
     }
     get audios(){
