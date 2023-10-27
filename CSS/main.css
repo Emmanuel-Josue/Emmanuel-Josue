@@ -1,0 +1,83 @@
+main{
+    width: 100%;  
+    padding: 1rem;
+    text-align: justify;
+    background-image: url(https://i.ytimg.com/vi/fG_po4mdIgk/mqdefault.jpg);
+}
+.section{
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+}
+.section__p{
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+.section__figure{
+    width: 70%;
+    height: 200px;
+    margin-bottom: 2rem;
+}
+.section__img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+.section__h2{
+    font-family: Martel;
+    align-self: flex-start;
+    margin-bottom: 1rem;
+}
+.section__h2--pointer{
+    cursor: pointer;
+}
+.section__div{
+    display: flex;
+}
+.orderOne{
+    order: 1;
+}
+.orderTwo{
+    order: 2;
+}
+.section__figure--width{
+    width: 50%;
+}
+.section__p--width{
+    display: flex;
+    width: 50%;
+    padding: 1rem;
+    text-align: center;
+    align-items: center;
+}
+.section__ul{
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+.section__li{
+    width: 4rem;
+    height: 4rem;
+    border-radius: .5rem;
+    border: 1px solid white;
+}
+.section__li--blue{
+    background-color: blue;
+}
+.section__li--red{
+    background-color: red;
+}
+.section__li--black{
+    background-color: black;
+}
+.section__a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.figure__img{
+    cursor: pointer;
+}

@@ -1,0 +1,83 @@
+.header{
+display: flex;
+justify-content: space-between;
+width: 100%;
+border-bottom: 1px solid white;
+/* padding: .5rem; */
+}
+.header__h1{    
+    /* border: 1px solid white; */
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    font-family: Martel;
+
+}
+.header__nav{   
+    display: flex;
+    align-items: center;
+    padding: .5rem;
+}
+.header__figure{    
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+}
+.header__img{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+}
+.header__ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    /*El top lo obtendremos con javaScript */
+    /* top: 68px; */
+    left: 0px;
+    background-color: black;
+    width: 100%;
+    /* height: 100vh; */
+    
+}
+.header__li{
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    cursor: pointer;
+    
+}
+.li__ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: 100vh; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+}
+.li__li{
+    padding: 2rem;
+    border-bottom: 1px solid white;
+}
+.li__div{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.li__figure{
+    width: 3rem;
+    height: 3rem;
+}
+.li__img{
+    width: 100%;
+    height: 100%;
+}
+.li__a{
+    color: var(--link);
+    text-decoration: underline;
+}
