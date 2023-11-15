@@ -1,22 +1,23 @@
+// -------------------- PROYECTO NUEVO -------------------------
+
 'use strict';
 /* -------------------------------- Importaciones ----------------------------------- */
 import { Pregunta } from "./pregunta.mjs";
 import { Operaciones } from "./operacion.mjs";
 
 /* --------------------------------- conexión con html ------------------------------- */
-const imagenUno = document.querySelector('li img');
-const imagenDos = document.querySelector('li:nth-child(2) img');
-const imagenTres = document.querySelector('li:nth-child(3) img');
-const imagenCuatro = document.querySelector('li:nth-child(4) img');
-const botonAudio = document.querySelector('.primary-button');
-const vtnAcierto = document.querySelector(".ventanaAcierto");
-const vtnError = document.querySelector(".ventanaError");
-const btnPress = document.querySelector(".button-prees");
-const btnSiguiente = document.querySelector(".btnSiguiente");
-const btnRepetir = document.querySelector(".btnRepetir");
-const vtnFinal = document.querySelector(".ventanaFinal");
-const btnSalir = document.querySelectorAll(".btnSalir");
-const btnReiniciar = document.querySelector(".btnReiniciar");
+const imagenUno = document.querySelector('#img1');
+const imagenDos = document.querySelector('#img2');
+const imagenTres = document.querySelector('#img3');
+const imagenCuatro = document.querySelector('#img4');
+const vtnAcierto = document.querySelector('#hWindow');
+const vtnError = document.querySelector('#eWindow');
+const btnPress = document.querySelector('#btnAudio');
+const btnSiguiente = document.querySelector('#nextBtn');
+const btnRepetir = document.querySelector('#repeatBtn');
+const btnSalir = document.querySelectorAll('#exitBtn');
+const vtnFinal = document.querySelector('#endWindow');
+const btnReiniciar = document.querySelector('#restartBtn');
 /* -------------------------------- Atributos de la clase ---------------------------- */
 let oPregunta = new Pregunta();
 let contenedorImagen = [imagenUno, imagenDos, imagenTres, imagenCuatro];
@@ -27,6 +28,7 @@ oOperaciones.ventanaFinal = vtnFinal;
 // Función crea y establece que nuemero se enviara en la función que valida la respuesta
 function establecerNumeroAEnviar(numero) {
     return function () {
+        console.log('preciono boton ' + numero);
         oOperaciones.validacion(numero, vtnAcierto, vtnError, btnPress);
     }
 }
@@ -39,14 +41,14 @@ const enviarCuatro = establecerNumeroAEnviar(3);
 
 function llamarPregunta() {
     //Se cierra la ventana acierto y se habilita el boton para escuchar el audio 
-    vtnAcierto.classList.add("inactivo");
-    btnPress.classList.remove("inactivo");
+    vtnAcierto.classList.add("inactive");
+    btnPress.classList.remove("inactive");
     // Se crea una nueva pregunta
     oOperaciones.elegirModoDeCrearPregunta();
 }
 
 function repetir(){
-    btnPress.classList.remove('inactivo');
+    btnPress.classList.remove('inactive');
     oOperaciones.cerrarVentana(vtnError);
 }
 function salir(){
@@ -59,7 +61,7 @@ function recargar(){
 
 /* ---------------------------------- Eventos de acción ----------------------------------------- */
 
-botonAudio.addEventListener("click", oPregunta.oAudio.reproducir);
+btnPress.addEventListener("click", oPregunta.oAudio.reproducir);
 imagenUno.addEventListener("click", enviarUno);
 imagenDos.addEventListener("click", enviarDos);
 imagenTres.addEventListener("click", enviarTres);

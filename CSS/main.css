@@ -1,8 +1,8 @@
+
 main{
     width: 100%;  
     padding: 1rem;
     text-align: justify;
-    background-image: url(https://i.ytimg.com/vi/fG_po4mdIgk/mqdefault.jpg);
 }
 .section{
     display: flex;    

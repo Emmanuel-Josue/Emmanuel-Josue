@@ -1,0 +1,50 @@
+.ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    /* background-color: black; */
+}
+.ul__li{ 
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    width: 100%;
+    height: 20rem;
+    margin: 1rem 0;
+    border: 1px solid white;
+    border-radius: 1rem;
+    background-color: black;
+}
+.ul__a{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+}
+.ul__div{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 80%;
+}
+.ul__figure{
+    display: flex;
+    align-items: center;
+}
+.ul__img{
+    width: 10rem;
+    height: 10rem;
+}
+.ul__p{    
+    display: flex;
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}

@@ -3,6 +3,7 @@ display: flex;
 justify-content: space-between;
 width: 100%;
 border-bottom: 1px solid white;
+background-color: black;
 /* padding: .5rem; */
 }
 .header__h1{    
@@ -46,7 +47,9 @@ border-bottom: 1px solid white;
     margin-bottom: 3rem;
     font-size: 2rem;
     cursor: pointer;
-    
+}
+.header__a{
+    color: white;
 }
 .li__ul{
     display: flex;
@@ -79,5 +82,5 @@ border-bottom: 1px solid white;
 }
 .li__a{
     color: var(--link);
-    text-decoration: underline;
+    text-decoration: underline; 
 }
