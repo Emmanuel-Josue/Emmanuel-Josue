@@ -15,8 +15,12 @@ main{
 }
 .section__figure{
     width: 70%;
-    height: 200px;
+    max-width: 20rem;
+    min-height: 20rem;
     margin-bottom: 2rem;
+}
+.section__figure--height{
+    height: 20rem;
 }
 .section__img{
     width: 100%;
@@ -34,6 +38,7 @@ main{
 }
 .section__div{
     display: flex;
+    justify-content: space-between;
 }
 .orderOne{
     order: 1;

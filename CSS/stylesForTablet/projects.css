@@ -1,0 +1,16 @@
+@media (min-width: 600px){
+    .ul__div{
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+    .ul__li{
+    }
+    .ul__p{
+        width: 50%;
+        text-align: justify;
+    }
+}
+@media(max-width: 610px){
+
+}

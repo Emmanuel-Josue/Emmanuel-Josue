@@ -1,0 +1,9 @@
+@media (min-width: 1200px){
+    .footer__ul{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+@media(max-width: 610px){
+
+}
