@@ -1,5 +1,16 @@
 @media (min-width: 600px){
-
+    .div{
+        display: flex; 
+        flex-direction:row; 
+        justify-content: space-around;  
+        align-items: center;
+    }
+    .div__p{
+        width: 50%;
+    }
+    .div__p--orderOne{
+        order: 1;
+    }
 }
 @media(max-width: 610px){
 
