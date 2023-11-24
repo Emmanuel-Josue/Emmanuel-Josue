@@ -63,11 +63,13 @@ export class Operaciones {
 
     if (this.#_objetoPregunta.oImagen.imagenes.length > 3) {
       this.crearPregunta();
+      this.#_objetoPregunta.oAudio.reproducir();
     }
     else if (this.#_objetoPregunta.oImagen.imagenes.length <= 3 && this.#_objetoPregunta.oImagen.imagenes.length > 0) {
       //Indice que ayudara a encontrar el string que se debe de eliminar en el arreglo de apoyo. 
       let indiceImagenAColocar = (this.#_objetoPregunta.oImagen.imagenes.length - 1);
       this.crearPreguntaAdicionandoElementos(indiceImagenAColocar);
+      this.#_objetoPregunta.oAudio.reproducir();
     }
   }
   //Elije la forma de validar 
