@@ -2,19 +2,20 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/header.css">
-    <link rel="stylesheet" href="../../CSS/footer.css">
-    <link rel="stylesheet" href="../../CSS/general.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../CSS/header.css" />
+    <link rel="stylesheet" href="../../CSS/footer.css" />
+    <link rel="stylesheet" href="../../CSS/general.css" />
+    <link rel="stylesheet" href="../../CSS/blog/articleOne/article.css">
 
-    <link rel="stylesheet" href="../../CSS/stylesForTablet/main.css">
-    <link rel="stylesheet" href="../../CSS/stylesForDesktop/footer.css">
+    <link rel="stylesheet" href="../../CSS/stylesForTablet/main.css" />
+    <link rel="stylesheet" href="../../CSS/stylesForDesktop/footer.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Handlee&family=Martel:wght@600&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
     <title>Articulo uno</title>
 </head>
@@ -22,14 +23,13 @@
 <body>
     <header class="header">
         <h1 class="header__h1">
-            PROGRAMADOR <br>
-            EN
-            PROCESO
+            PROGRAMADOR <br />
+            EN PROCESO
         </h1>
         <nav class="header__nav">
             <figure class="header__figure">
                 <img class="header__img"
-                    src="../recursos/imagenes/imagenesParaProyectoGeneral/iconmonstr-menu-circle-lined-24.png" alt="">
+                    src="../recursos/imagenes/imagenesParaProyectoGeneral/iconmonstr-menu-circle-lined-24.png" alt="" />
             </figure>
             <ul class="header__ul inactive">
                 <li class="header__li">
@@ -43,7 +43,7 @@
                                 <figure class="li__figure">
                                     <img class="li__img"
                                         src="../recursos/imagenes/imagenesParaProyectoGeneral/iconmonstr-whatsapp-4-32.png"
-                                        alt="">
+                                        alt="" />
                                 </figure>
                                 <p>55 23 59 49 46</p>
                             </div>
@@ -52,7 +52,7 @@
                             <div class="li__div">
                                 <figure class="li__figure">
                                     <img class="li__img"
-                                        src="../recursos/imagenes/imagenesParaProyectoGeneral/github.png" alt="">
+                                        src="../recursos/imagenes/imagenesParaProyectoGeneral/github.png" alt="" />
                                 </figure>
                                 <a class="li__a" href="https://github.com/Emmanuel-Josue">Ver repositorio</a>
                             </div>
@@ -63,24 +63,39 @@
         </nav>
     </header>
     <main class="main">
-        <article>
+        <article class="article">
             <h2>COMPRENDIENDO LAS AREAS O ESTADOS DE GIT</h2>
-            <P>
-                Para poder utilizar los comandos de git y entenderlos es importante entender los estados que pueden
-                tener los archivos o dicho de otra forma las areas en donde puede estar cada archivo, yo entendí esto
-                creando unos graficos, espero te sirvan y también la explicación.
-            </P>
+            <p>
+                Para poder utilizar los comandos de git y entenderlos es importante
+                entender los estados que pueden tener los archivos o dicho de otra
+                forma las áreas en donde puede estar cada archivo, yo entendí esto
+                creando unos gráficos, espero te sirvan junto con la explicación. <br> <br>
+                Para empezar debemos entender los siguientes comandos básicos <br> <br>
+                Git init : Inicializa un repositorio de git el cual nos permitirá empezar a
+                utilizar todos los comandos de git, puedes utilizarlo en una carpeta
+                en donde ya existen archivos o en una carpeta en donde empezaras a
+                crear archivos para tu proyecto. <br> <br>
+                Ejemplo: <br>
+                Nos encontramos en una
+                carpeta llamada "git" la cual no tiene archivos
+            </p>
+            <figure class="article__figure">
+                <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
+            </figure>
+            <pre><code>
+                cat archivo.txt
+            </code></pre>
         </article>
     </main>
     <footer class="footer">
-        <h2 class="footer__h2 ">Por tu atención muchas gracias !!</h2>
+        <h2 class="footer__h2">Por tu atención muchas gracias !!</h2>
         <section class="footer__section">
             <ul class="footer__ul">
                 <li class="footer__li">
                     <div class="footer__div">
                         <figure>
                             <img src="../recursos/imagenes/imagenesParaProyectoGeneral/iconmonstr-whatsapp-4-32.png"
-                                alt="" class="ignorar">
+                                alt="" class="ignorar" />
                         </figure>
                         <p>WhatsApp</p>
                     </div>
@@ -90,7 +105,7 @@
                     <div class="footer__div">
                         <figure>
                             <img src="../recursos/imagenes/imagenesParaProyectoGeneral/github.png" alt=""
-                                class="ignorar">
+                                class="ignorar" />
                         </figure>
                         <p>Github</p>
                     </div>
