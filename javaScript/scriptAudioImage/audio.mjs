@@ -85,9 +85,7 @@ export class AudioR{
     get audios(){
         return this.#_audios;
     }
-    crearOAudio(direccion){
-        console.log('La dirección nobtenida es: '+ direccion);
-        
+    crearOAudio(direccion){        
         this.audio = new Audio(direccion); 
     }
     establecerRutaAReproducir(direccion){
@@ -95,8 +93,6 @@ export class AudioR{
     }
     // para que this pueda tomar como contexto a su objeto. 
     reproducir = () => {      
-        console.log('Se preciono el boton press');
-        console.log('Ruta a reproducir: ' + this.audio.src);
         this.audio.play();            
     }
     //Una pagina se repite en tiempo de ejecución ?? 

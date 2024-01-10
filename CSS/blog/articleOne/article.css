@@ -1,8 +1,36 @@
+.main{
+    padding: 1.5rem;
+    background: none;
+    text-align: justify;
+}
+.article__h2{
+    text-align: center;
+    font-size: 2rem;
+    font-family: Mulish;
+    font-weight:600;
+    margin-bottom: 1rem;
+}
+/* .article__pre{
+    border-radius: 1rem;
+    background-color: darkgrey;
+    border: 1px solid white;
+}
+.article__code{
+
+} */
+
+.article__p{
+    font-family: Mulish;
+}
+
 .article__figure{
     width: 90%;
+    margin-top: 1rem;
+    text-align: center;
 }
 .article__img{
     width: 100%;
-    object-fit: cover;
-    
+}
+.article__li{
+    font-family: Mulish;
 }

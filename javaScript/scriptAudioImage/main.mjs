@@ -28,7 +28,6 @@ oOperaciones.ventanaFinal = vtnFinal;
 // Función crea y establece que nuemero se enviara en la función que valida la respuesta
 function establecerNumeroAEnviar(numero) {
     return function () {
-        console.log('preciono boton ' + numero);
         oOperaciones.validacion(numero, vtnAcierto, vtnError, btnPress);
     }
 }
