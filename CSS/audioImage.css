@@ -88,3 +88,6 @@
     border-radius: 1rem;
     border: 1px solid #C7C7C7;
 }
+.finding_error{
+    color: red;
+}
