@@ -10,14 +10,27 @@
     font-weight:600;
     margin-bottom: 1rem;
 }
-/* .article__pre{
+.article__div{
+    display: flex;
+    background: black;
+    flex-direction: column;
     border-radius: 1rem;
-    background-color: darkgrey;
     border: 1px solid white;
 }
-.article__code{
+.div__div{
+    padding: .2rem;
+    border-bottom: 1px solid white;
+}
+.div__pre{
+    
+}
+.div__span--green{
+    color: #16c60c;
+}
+.div__span--blue{
+    color: blue;
+}
 
-} */
 
 .article__p{
     font-family: Mulish;

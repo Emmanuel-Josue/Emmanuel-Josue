@@ -87,13 +87,21 @@
 
             </p>
             <figure class="article__figure">
-                <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
+                <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/01-img.png" alt="">
             </figure>
+            <div class="article__div">
+                <div class="div__div">Terminal</div>
+                <pre class="div__pre">
+<span class="div__span--green">usuario@DESKTOP-000</span>:<span class="div__span--blue">~</span>$ code .
+
+                </pre>
+            </div>            
+
             <p class="article__p">
                 Creamos un archivo en la carpeta para ejemplos del comando git status
             </p>
             <figure class="article__figure">
-                <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
+                <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/01-img.png" alt="">
             </figure>
             <ol>
                 <li class="article__li">
@@ -102,7 +110,7 @@
                     tres estados o áreas las cuales enlistamos a continuación ;Sin seguimiento o no rastreado
                     (untracked)
                     <figure class="article__figure">
-                        <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
+                        <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/02-img.png" alt="">
                     </figure>
                 </li>
                 <li class="article__li">
@@ -111,7 +119,7 @@
                 <li class="article__li">
                     Agregado al área de preparación
                     <figure class="article__figure">
-                        <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
+                        <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/03-img.png" alt="">
                     </figure>
                 </li>
             </ol>
@@ -122,7 +130,7 @@
                 estos, visualmente las áreas las podrías imaginar de la siguiente forma
             </p>
             <figure class="article__figure">
-                <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
+                <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/04-img.png" alt="">
             </figure>
             <h2 class="article__h2">
                 Directorio de trabajo (working directory)
@@ -135,7 +143,7 @@
                 utilizando el comando git status, la salida de este comando será algo así:
             </p>
             <figure class="article__figure">
-                <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
+                <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/05-img.png" alt="">
             </figure>
             <p class="article__p">
                 Graficamente lo podemos imaginar así }
@@ -190,47 +198,47 @@
                     el área de preparación
                 </li>
             </ol>
-            <p>
+            <p class="article__p">
                 Pero antes de ejecutar esto vamos a editar, con ayuda de vim, el archivo "muebles.txt" y colocar un
                 texto, puedes colocar el que quieras, yo para este ejemplo coloque la palabra "ropero"
             </p>
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 Luego de guardar el texto vamos a utilizar el comando "git status" para ver que el archivo sigue sin ser
                 rastreado
             </p>
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 Ahora ejecutaremos el comando "git add muebles.txt"
             </p>
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 Y un git status para ver lo que ha pasado
             </p>
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 Podemos ver que ahora el nombre del archivo está en verde y que nos sale un mensaje que dice "cambios
                 para el commit", nuestro archvio ahora está en el área de preparación, visualmente lo podríamos ver así
             </p>
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 Una vez pasamos los archivos con cambios al área de preparación el siguiente paso es realizar nuestro
                 primer commit y con esto pasar nuestros cambios al área del repositorio .
             </p>
             <h2>
                 Repositorio (repository)
             </h2>
-            <p>
+            <p class="article__p">
                 El área de repositorio o el repositorio es donde existirán nuestros commit que son como fotografías de
                 nuestro proyectos que tienen los cambios que han sufrido a lo largo del desarrollo del proyecto. Tratare
                 de expresar esto con los siguientes gráficos y continuando con el archivo que tenemos el cual ha llegado
@@ -239,13 +247,13 @@
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 Y tiene en su interior la palabra "ropero" que trataremos de representar visualmente así
             </p>
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 Ahora para llevarla al área de repositorio necesitamos aplicar un commit esto lo hacemos con el
                 siguiente comando
                 <br>git commit -m "Primer commit"
@@ -253,7 +261,7 @@
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 Al ejecutar el comando se han guardado todos los cambios en este commit, podemos pensar que se ha tomado
                 una foto del proyecto con los cambios realizados algo así… bueno antes veremos que el archivo esta en el
                 area del repositorio
@@ -262,25 +270,25 @@
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 Veámoslo más de cerca
             </p>
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 Ahora imaginemos visualmente lo que hay en su interior
             </p>
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 En este punto podemos imaginar que el commit se ve algo así
             </p>
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 Ahora viene una parte muy importante a entender ya que una vez echo cada commit ahora los cambios que
                 realicemos en los archivos ya existentes tendrán o lucirán como en el ultimo commit que hemos realizado,
                 en nuestro ejemplo el ultimo commit es el commit 1 llamado "Primer commit" si realizamos un cambio al
@@ -293,19 +301,19 @@
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 y aplicamos el comando git status
             </p>
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 Visualmente podemos imaginarlo algo así
             </p>
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 Digamos que las modificaciones se agregaran a una versión del archivo existente en el último commit, en
                 nuestra representación gráfica podemos ver que nuestra fotografía o primer commit no se verá afectado
                 por las modificaciones sino que quedara guardado por si en algún momento queremos regresar a esa versión
@@ -318,20 +326,20 @@
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 Una vez aplicado el comando git add
             </p>
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 luego en un commit aplicando el comando git commit -m "mensaje descriptivo sobre el cambio" para que de
                 esta forma se guarden los nuevos cambios, podemos imaginarlo de esta forma al final del segundo commit
             </p>
             <figure class="article__figure">
                 <img class="article__img" src="../../recursos/imagenes/imgBlog/articleOne/imgB_1.png" alt="">
             </figure>
-            <p>
+            <p class="article__p">
                 El commit 2 es el ultimo commit realizado, es decir que este es el commit más reciente, el repositorio y
                 sus commit (fotografías de los estados que ha tenido el proyecto) nos sirven para poder guardar y ver,
                 si lo requerimos, una versión o estado de nuestro proyecto y permitirnos regresar a un punto si es que
