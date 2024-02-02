@@ -44,6 +44,5 @@ function openCloseMenu() {
         contacts.classList.add('inactive');
     }
 }
-
 btnMenu.addEventListener('click', openCloseMenu);
 contactsOption.addEventListener('click', openMenuContact);

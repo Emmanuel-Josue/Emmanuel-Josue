@@ -1,0 +1,6 @@
+.main{
+    /* La medida del heigt y el display debe de cambiar cuando se tengán mas opciones, más articulos.  */
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+}

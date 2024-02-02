@@ -1,0 +1,11 @@
+@media (min-width: 600px){
+    .main{
+        background-image: url(https://i.ytimg.com/vi/fG_po4mdIgk/mqdefault.jpg);
+    }
+    .article{
+        background: black;
+    }
+}
+@media(max-width: 610px){
+   
+}
