@@ -1,9 +1,13 @@
-// -------------------- PROYECTO NUEVO -------------------------
+/*
+
+    NO UTILIZARÉ ESTE ARCHIVO POR EL MOMENTO !!
+
+*/
 
 'use strict';
 /* -------------------------------- Importaciones ----------------------------------- */
-import { Pregunta } from "./pregunta.mjs";
-import { Operaciones } from "./operacion.mjs";
+const Pregunta = require("./pregunta.js");
+const Operaciones = require("./operacion.js");
 
 /* --------------------------------- conexión con html ------------------------------- */
 const imagenUno = document.querySelector('#img1');
@@ -19,11 +23,11 @@ const btnSalir = document.querySelectorAll('#exitBtn');
 const vtnFinal = document.querySelector('#endWindow');
 const btnReiniciar = document.querySelector('#restartBtn');
 /* -------------------------------- Atributos de la clase ---------------------------- */
-let oPregunta = new Pregunta();// Esto debe suceder en el backend 
-let contenedorImagen = [imagenUno, imagenDos, imagenTres, imagenCuatro];// Debo de enviar el array con el que va a trabajar el backend 
-let oOperaciones = new Operaciones(contenedorImagen, oPregunta);// Cuando se crea el objeto se crea la primera pregunta // Esto también bede de suceder en el backend 
+let oPregunta = new Pregunta();// Esto debe suceder en el backend
+let contenedorImagen = [imagenUno, imagenDos, imagenTres, imagenCuatro];// Debo de enviar el array con el que va a trabajar el backend
+let oOperaciones = new Operaciones(contenedorImagen, oPregunta);// Cuando se crea el objeto se crea la primera pregunta // Esto también bede de suceder en el backend
 
-//Le brindamos la ventana que mostrara al terminar la practica 
+//Le brindamos la ventana que mostrara al terminar la practica
 oOperaciones.ventanaFinal = vtnFinal;
 // Función crea y establece que nuemero se enviara en la función que valida la respuesta
 function establecerNumeroAEnviar(numero) {
@@ -32,14 +36,14 @@ function establecerNumeroAEnviar(numero) {
     }
 }
 
-//Creamos las funciones 
+//Creamos las funciones
 const enviarUno = establecerNumeroAEnviar(0);
 const enviarDos = establecerNumeroAEnviar(1);
 const enviarTres = establecerNumeroAEnviar(2);
 const enviarCuatro = establecerNumeroAEnviar(3);
 
 function llamarPregunta() {
-    //Se cierra la ventana acierto y se habilita el boton para escuchar el audio 
+    //Se cierra la ventana acierto y se habilita el boton para escuchar el audio
     vtnAcierto.classList.add("inactive");
     btnPress.classList.remove("inactive");
     // Se crea una nueva pregunta
