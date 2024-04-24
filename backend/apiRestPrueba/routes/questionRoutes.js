@@ -4,12 +4,9 @@ const OperationService = require('../services/operationsService');
 const router = express.Router();// Es una función, pero ¿Qué hace ?
 // Se establecen las rutas que se utilizarán para dar y recibir información
 router.get('/validateResponse/:id',(req, res) => {
-  console.log('LLego a este punto !!');
   const { id } = req.params;
   const serviceObject = new OperationService();
-  console.log('El parametro obtenido es::::: ' + typeof id );
   const reply = serviceObject.validateResponse(id);
-  console.log(reply);
   res.json(
     {
       answer:reply,

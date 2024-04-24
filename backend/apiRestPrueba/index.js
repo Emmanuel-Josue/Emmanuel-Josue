@@ -5,7 +5,7 @@ const app  = express();// El constructor de expres crea una aplicación
 
 const port = 3000;// Inicializamos una variable con el número 3000
 //Son los dos puertos que utilizaré por el momento, el que utiliza live server y el mismo origen del backend
-const whitelist = ['http://localhost:3000','http://127.0.0.1:5500','http://127.0.0.1:5501'];
+const whitelist = ['http://localhost:3000','http://127.0.0.1:5500','http://127.0.0.1:5501','https://programadorenproceso.com/'];
 const options = {
   // Una propiedad que es un método el cual evaluará el origen
   origin:(origin, callback) =>{

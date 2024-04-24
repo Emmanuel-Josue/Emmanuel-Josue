@@ -1,28 +1,6 @@
-// 'use strict'
-
-// const Question = require("./pregunta.js");
-
-// class Operation{
-//   #questionObject;
-//   #imageArray;// new
-//   #fourRandomNumbers;
-//   #finalAttempts;
-//   #endWindow;
-
-//   constructor(questionObject){
-//     this.#questionObject = questionObject;
-
-//   }
-//   createQuestion(){
-
-//   }
-
-// }
 
 "use strict";
 const Question = require("./pregunta.js");
-/* -------------------------------- Imports ----------------------------------- */
-
 class Operations {
   #_questionObject;
   #_answerIndex;
@@ -36,7 +14,6 @@ class Operations {
     this.createQuestion();
   }
   createQuestion() {
-    console.log('Entra la función createQuestion ----------:::::::::::::');
     // El rango es el número actual que hay en el arreglo de las imagenes del objeto imagen
     this.#randomNumbers(this.#_questionObject.oImagen.imagenes.length);
     this.#setPathsToElements( this.#_questionObject.oImagen.imagenes, this.#_randomNumberOptions);// En este punto debemos de retornar las rutas al frontend
@@ -90,14 +67,12 @@ class Operations {
     }
   }
   get pathsToImages(){
-    console.log('Linea 70 --');
-    console.log(this.#pathsToImagesForQuestion);
     return this.#pathsToImagesForQuestion;
   }
   get currentAudio(){
     return this.#currentAudio;
   }
-  
+
   #validateResponseN(pressedImageNumber, currentImages, positionIndex) {
     if (currentImages[positionIndex[pressedImageNumber]] === currentImages[positionIndex[this.#_answerIndex]] && this.#_questionObject.oImagen.imagenes.length <= 3) {
       if (this.#_questionObject.oImagen.imagenes.length === 1) {
@@ -115,20 +90,12 @@ class Operations {
           isItCorret: true,
           showFinalWindow: false
          }
-        /**
-         * El booleano será true y el bolleano para la ventana final será false
-        */
       }
       this.#deleteElement((this.#_questionObject.oImagen.imagenes.length - 1), this.#_questionObject.oAudio.audios, this.#_questionObject.oImagen.imagenes)
       return this.#reply;
     }
     else if (currentImages[positionIndex[pressedImageNumber]] === currentImages[positionIndex[this.#_answerIndex]]) {
       this.#deleteElement((positionIndex[this.#_answerIndex]), this.#_questionObject.oAudio.audios, this.#_questionObject.oImagen.imagenes)
-      /**
-       *  Se enviara el booleano como true y el booleano para la ventana final será flase
-       */
-      console.log('Entro aquí -!!!');
-      console.log(typeof pressedImageNumber);
       this.#reply = {
         isItCorret: true,
         showFinalWindow: false

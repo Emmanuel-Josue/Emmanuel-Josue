@@ -1,9 +1,3 @@
-/**
- *
- *    Todo lo del archivo main va a suceder aquí
- *
- *
- */
 
 "use strict";
 
