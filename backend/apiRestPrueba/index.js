@@ -25,7 +25,7 @@ routerApi(app)
 // Con esto le decimos por qué puerto debe de estar escuchando nuestra aplicación, le pasamos la varable port, el
 // callback lo podemos utilizar paraa verificar cuando ya se este corriedo en el puesto espesificado.
 app.listen(port, () =>{
-  console.log(' Mi puesto es !!  ' + port);
+  console.log(' Mi puerto es !!  ' + port);
 });
 
 

@@ -3,25 +3,54 @@ const OperationService = require('../services/operationsService');
 
 const router = express.Router();// Es una función, pero ¿Qué hace ?
 // Se establecen las rutas que se utilizarán para dar y recibir información
-router.post('/createQuestion', (req, res) => {
-  // Traeremos los elementos que se envien desde el frontend
-  const content = req.body;// es un objeto que contiene al elemento que nos envian
-  console.log('Estamos en el backend ruta post');
-  const contentImage = content.contenedorImagen;
-
-    // Creamos el objeto pregunta y con el la primera pregunta
-    const oOperacionServicio = new OperationService(contentImage);
-    console.log(oOperacionServicio);
+router.get('/validateResponse/:id',(req, res) => {
+  console.log('LLego a este punto !!');
+  const { id } = req.params;
+  const serviceObject = new OperationService();
+  console.log('El parametro obtenido es::::: ' + typeof id );
+  const reply = serviceObject.validateResponse(id);
+  console.log(reply);
   res.json(
     {
-      message:'SOY EL OBJETO QUE TIENE DOS PARAMETROS',
-      data: content
+      answer:reply,
+      message: 'Se obtuvo una respuesta  !!'
+    }
+  )
+});
+router.get('/createQuestion', (req, res) => {
+    // Creamos el objeto pregunta y con el la primera pregunta
+  const serviceObject = new OperationService();
+  serviceObject.createQuestion();
+  const array = serviceObject.pathsToImages;
+  res.json(
+    {
+      arrayOfImages: array,
+      message: 'La optención fue exitosa !'
+    }
+  )
+});
+router.get('/createQuestion/next', (req, res) => {
+  // Creamos el objeto pregunta y con el la primera pregunta
+const serviceObject = new OperationService();
+serviceObject.createQuestionNext();
+const array = serviceObject.pathsToImages;
+res.json(
+  {
+    arrayOfImages: array,
+    message: 'La optención fue exitosa !'
+  }
+)
+});
+router.get('/createQuestion/getCurrentAudio',(req, res) => {
+  const serviceObject = new OperationService()
+  const currentAudio = serviceObject.currentAudio;
+  res.json(
+    {
+      audio: currentAudio,
+      message: 'El audio se obtuvo  !!'
     }
   )
 });
 
-router.get(
-  
-)
 
 module.exports = router;
