@@ -16,7 +16,7 @@ const btnReiniciar = document.querySelector('#restartBtn');
 let currentSound;
 // address of our api
 
-const URLAPI = 'http://localhost:3000/api/v1/'
+const URLAPI = 'http://programadorenproceso/api/v1/'
 
 const contenedorImagen = [imagenUno, imagenDos, imagenTres, imagenCuatro];
 
