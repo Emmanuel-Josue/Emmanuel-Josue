@@ -16,7 +16,7 @@ const btnReiniciar = document.querySelector('#restartBtn');
 let currentSound;
 // address of our api
 
-const URLAPI = 'http://programadorenproceso/api/v1/'
+const URLAPI = 'https://programadorenproceso:3000/api/v1/'
 
 const contenedorImagen = [imagenUno, imagenDos, imagenTres, imagenCuatro];
 
@@ -113,6 +113,15 @@ function salir(){
     history.back();
     console.log('ME ha precionado !!');
 }
+async function testingConnection(){
+    try {
+        const mensaje = await fetchData(URLAPI+'question/prueba') 
+        console.log(mensaje.message);
+    } catch (error) {
+        console.log(error);
+    }
+
+}
 
 const btnOne = createFunctionOfReply(0);
 const btnTwo = createFunctionOfReply(1);
@@ -122,6 +131,8 @@ const btnFor = createFunctionOfReply(3);
 
 createQuestion();
 setAudio();
+testingConnection();
+
 
 btnPress.addEventListener('click', play);
 imagenUno.addEventListener('click', btnOne);
