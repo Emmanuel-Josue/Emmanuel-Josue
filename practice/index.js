@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(cors())
 // El método get de la aplicación es para crear una ruta, el callback es lo que se ara cuando se invoque esa ruta,
 // el callback tendra dos parametros por default, el requese y el default
-app.get('/', (req, res) => {
+app.get('/prueba', (req, res) => {
   res.json(
     {
       message: 'La conexión se ha establecido !!!!'
