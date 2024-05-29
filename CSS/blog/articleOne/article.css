@@ -53,3 +53,22 @@
     border: .1rem solid gray;
     hyphens: none;
 }
+.article_ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+}
+.article__li{
+    margin: .5rem;
+}
+.article__h2--left{
+    text-align:left;
+    margin: 2rem 0;
+}
+.article__a{
+    color: var(--link);
+}
+.article__a--line{
+    text-decoration:underline;
+}
+
