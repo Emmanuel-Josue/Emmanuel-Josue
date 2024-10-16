@@ -1,5 +1,4 @@
-
-main{
+.main{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,91 +6,103 @@ main{
     padding: 3rem 1rem 1rem 1rem;
     text-align: justify;
 }
-.div{
-    display: flex;    
-    flex-direction: column;
-    align-items: center;
-}
-.section{
-    display: flex;    
+.introduction{
+    display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 800px;
+
 }
-.section__p{
-    font-size: 1.6rem;
-    margin-bottom: 2rem;
-}
-.section__figure{
+.introduction__image-container{
+    display: flex;    
     width: 70%;
-    max-width: 20rem;
-    min-height: 20rem;
-    margin-bottom: 2rem;
+    max-width: 25rem;
+    min-height: 25rem;
+    margin-bottom: .5rem;
+    align-items: center;
 }
-.section__figure--height{
-    height: 20rem;
-}
-.section__img{
+.introduction__robot-image{
     width: 100%;
     height: 100%;
     border-radius: 0.5rem;
     object-fit: cover;
 }
-.section__h2{
-    font-family: Martel;
-    align-self: flex-start;
-    margin-bottom: 1rem;
-}
-.section__h2--pointer{
-    cursor: pointer;
-}
-.section__div{
+.projects{
     display: flex;
-    justify-content: space-between;
-}
-.orderOne{
-    order: 1;
-}
-.orderTwo{
-    order: 2;
-}
-.section__figure--width{
-    width: 50%;
-}
-.section__p--width{
-    display: flex;
-    width: 50%;
-    padding: 1rem;
-    text-align: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    /* background-color: black; */
+    width: 100%;
+    max-width: 800px;
+    /* height: 200px; */
+    padding: 1rem;
 }
-.section__ul{
-    display: flex;
-    margin-bottom: 2rem;
-    gap: 1rem;
-}
-.section__li{
-    width: 4rem;
-    height: 4rem;
-    border-radius: .5rem;
-    border: 1px solid white;
-}
-.section__li--blue{
-    background-color: blue;
-}
-.section__li--red{
-    background-color: red;
-}
-.section__li--black{
+.projects__title-one{
+    width: 100%;
     background-color: black;
+    padding-left: 2rem;
+    font-family: Martel;
 }
-.section__a{
+.projects__container{
+    display: flex;
+    flex-direction: column;    
+    padding: 2rem;
+    gap: 2rem;
+    border-radius: 1.5rem;
+}
+/* Este selector puede que deba ser general, aplicado a 
+    todos las etiquetas article de la etiqueta sección en
+    la que estan estos selectores.  */
+.projects__blog{
+
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 1rem;
+    min-width: 25rem;
+
+}
+.projects__container-image{
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+    margin: 0.5rem;
+    margin-bottom: 1rem;
 }
-.figure__img{
-    cursor: pointer;
+.projects__image{
+    width: 70%;
+    height: 70%;
+    max-width: 16.5rem;
+    max-height: 16.5rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+/* .projects__explanation{
+    text-align: center;
+} */
+.projects__audio-image-ratio{
+    min-width: 25rem;
+    min-height: 35rem;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.presentation{
+    max-width: 800px;
+    margin-bottom: 3rem;
+}
+.presentation__text{
+    margin-bottom: 1rem;
+}
+.presentation__image-container{
+    display: flex;
+    justify-content: center;
+}
+.presentation__me{
+    width: 70%;
+    height: 70%;
+    max-width: 290px;
+    border-radius: 0.5rem;
+    object-fit: cover;
 }

@@ -1,5 +1,4 @@
-const titleTwo = document.querySelector('#titleTwo');
-const imageButton = document.querySelector('#imageButton');
+
 const header = document.querySelector(".header");
 const btnMenu = document.querySelector(".header__figure");
 const menu = document.querySelector('.header__ul');
@@ -11,20 +10,6 @@ const contacts = document.querySelector('.li__ul');
 
 
 // Function
-
-function displace(component){
-    component.scrollIntoView({ behavior: 'smooth' });
-}
-
-function scrollDown(){
-    displace(imageButton);
-}
-function scrollUp() {
-    displace(titleTwo);
-}
-function calculate_height(element){
-     return element.offsetHeight;
-}
 function styleSetHeight(element){
     // Calculamos la altura del header 
     let height = header.offsetHeight;
@@ -49,13 +34,13 @@ function openCloseMenu() {
     if(menu.classList.contains('inactive')){   
         styleSetHeight(menu);     
         styleSetTop(menu);
-        imageMenu.src ="../recursos/imagenes/imagenesParaProyectoGeneral/iconmonstr-x-mark-circle-lined-24.png";
+        imageMenu.src ="https://github.com/Josue-Emmanuel/imagesForPersonalPage/blob/main/imagenesParaProyectoGeneral/iconmonstr-x-mark-circle-lined-24.png?raw=true";
         main.classList.add('inactive');
         footer.classList.add('inactive');
         menu.classList.remove('inactive');
     }
     else{   
-        imageMenu.src ="../recursos/imagenes/imagenesParaProyectoGeneral/iconmonstr-menu-circle-lined-24.png";     
+        imageMenu.src ="https://github.com/Josue-Emmanuel/imagesForPersonalPage/blob/main/imagenesParaProyectoGeneral/iconmonstr-menu-circle-lined-24.png?raw=true";     
         main.classList.remove('inactive');
         footer.classList.remove('inactive');
         menu.classList.add('inactive');
@@ -64,9 +49,6 @@ function openCloseMenu() {
 }
 
 // Event
-
-titleTwo.addEventListener('click', scrollDown);
-imageButton.addEventListener('click', scrollUp);
 btnMenu.addEventListener('click', openCloseMenu);
 contactsOption.addEventListener('click', openMenuContact);
 
