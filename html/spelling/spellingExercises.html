@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../CSS/header.css" />
+    <link rel="stylesheet" href="../../CSS/footer.css" />
+
+    <link rel="stylesheet" href="../../CSS/styleForSpelling/spelling.css" />
+
+    <link rel="stylesheet" href="../../CSS/general.css" />
+
+    <link rel="stylesheet" href="../../CSS/stylesForTablet/main.css" />
+    <link rel="stylesheet" href="../../CSS/stylesForDesktop/footer.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Handlee&family=Martel:wght@600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>make other proyect</title>
+    <link
+      rel="icon"
+      href="https://github.com/Josue-Emmanuel/imagesForPersonalPage/blob/main/imagenesParaProyectoGeneral/imgProcess_2.png?raw=true"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <a href="../index.html">
+        <h1 class="header__h1">
+          PROGRAMADOR <br />
+          EN PROCESO
+        </h1>
+      </a>
+      <nav class="header__nav">
+        <figure class="header__figure">
+          <img
+            class="header__img"
+            src="https://github.com/Josue-Emmanuel/imagesForPersonalPage/blob/main/imagenesParaProyectoGeneral/iconmonstr-menu-circle-lined-24.png?raw=true"
+            alt=""
+          />
+        </figure>
+        <ul class="header__ul inactive">
+          <li class="header__li">
+            <a class="header__a" href="../index.html">Inicio</a>
+          </li>
+          <li class="header__li li">
+            Contacto
+            <ul class="li__ul inactive">
+              <li class="li__li">
+                <div class="li__div">
+                  <figure class="li__figure">
+                    <img
+                      class="li__img"
+                      src="https://github.com/Josue-Emmanuel/imagesForPersonalPage/blob/main/imagenesParaProyectoGeneral/iconmonstr-whatsapp-4-32.png?raw=true"
+                      alt=""
+                    />
+                  </figure>
+                  <p>55 23 59 49 46</p>
+                </div>
+              </li>
+              <li class="li__li">
+                <div class="li__div">
+                  <figure class="li__figure">
+                    <img
+                      class="li__img"
+                      src="https://github.com/Josue-Emmanuel/imagesForPersonalPage/blob/main/imagenesParaProyectoGeneral/github.png?raw=true"
+                      alt=""
+                    />
+                  </figure>
+                  <a class="li__a" href="https://github.com/Emmanuel-Josue"
+                    >Ver repositorio</a
+                  >
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <form class="form">
+        <div class="main__div">
+          <button class="main__button" id="btnAudio" type="button">
+            <img
+              class="main__img"
+              src="https://github.com/Josue-Emmanuel/imagesForPersonalPage/blob/main/imagenesParaProyectoGeneral/iconmonstr-sound-thin-48.png?raw=true"
+              alt=""
+            /> 
+          </button>
+        </div>
+        <input
+          class="main__writeYourSpelling"
+          id="response"
+          type="text"
+          placeholder="spelling your word"
+          autocomplete="off"
+        />
+        <button class="main__sendAnswer" id="sendResponse" type="button">Send</button>
+        <!-- -------------------------------- Ventanas de resultado ----------------------------------- -->
+        <aside class="form__aside aside inactive" id="hWindow">
+          <figure class="aside__figure">
+            <img
+              class="aside__img"
+              src="https://github.com/Josue-Emmanuel/imagesForPersonalPage/blob/main/imagenesParaProyectoGeneral/Correcto3.jpg?raw=true"
+              alt=""
+            />
+          </figure>
+          <div class="aside__div">
+            <button class="aside__button" id="nextBtn" type="button">
+              Siguiente
+            </button>
+          </div>
+        </aside>
+        <aside class="form__aside aside inactive" id="eWindow">
+          <figure class="aside__figure">
+            <img
+              class="aside__img"
+              src="https://github.com/Josue-Emmanuel/imagesForPersonalPage/blob/main/imagenesParaProyectoGeneral/Error.jpg?raw=true"
+              alt=""
+            />
+          </figure>
+          <div class="aside__div aside__div__error">
+            <button class="aside__button" id="repeatBtn" type="button">
+              Repetir
+            </button>
+            <button class="aside__button" id="exitBtn" type="button">
+              Salir
+            </button>
+          </div>
+        </aside>
+        <aside class="form__aside aside inactive" id="endWindow">
+          <figure class="aside__figure">
+            <img
+              class="aside__img"
+              src="https://images.pexels.com/photos/2889685/pexels-photo-2889685.jpeg?auto=compress&cs=tinysrgb&w=600"
+              alt=""
+            />
+          </figure>
+          <div class="aside__div aside__div__error">
+            <button class="aside__button" id="restartBtn" type="button">
+              Reiniciar
+            </button>
+            <button class="aside__button" id="exitBtn" type="button">
+              Salir
+            </button>
+          </div>
+        </aside>
+      </form>
+    </main>
+    <footer class="footer">
+      <p class="footer__p">Emmanuel</p>
+    </footer>
+    <script
+      type="module"
+      src="../../javaScript/script-Index/scriptMenu.mjs"
+    ></script>
+    <script
+      type="module"
+      src="../../javaScript/scriptAudioImage/esthetic.mjs"
+    ></script>
+    <script
+      type="module"
+      src="../../javaScript/scriptSpelling/main.mjs"
+    ></script>
+  </body>
+</html>

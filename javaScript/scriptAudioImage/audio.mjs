@@ -2,7 +2,6 @@
 export class AudioR{    
     #_audios;
     audio;
-    bug = document.querySelector('.finding_error');
     constructor(){
         // Colocamos los elementos en el array
         this.#listaAudios();             
@@ -91,8 +90,8 @@ export class AudioR{
     }
     // para que this pueda tomar como contexto a su objeto. 
     reproducir = () => {      
+        console.log(this.audio.src);
         this.audio.play();   
-        this.bug.classList.toggle('finding_error');
     }
     //Una pagina se repite en tiempo de ejecución ?? 
     

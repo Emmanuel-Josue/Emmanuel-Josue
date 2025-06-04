@@ -1,6 +1,4 @@
 // -------------------- PROYECTO NUEVO -------------------------
-
-
 "use strict";
 import { Pregunta } from "./pregunta.mjs";
 /* -------------------------------- Importaciones ----------------------------------- */
